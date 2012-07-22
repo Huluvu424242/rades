@@ -1,3 +1,5 @@
+RADeS
+=====
 **RADeS** stands for Rapid Application Development System
 
 Based on DSLs should be generated code by RADeS (Mixed of Domain Driven Development and Model Driven Development).
@@ -11,10 +13,14 @@ RADeS is build on EMEL architecture, which based on the following DSLs:
  
 **Project Site:** http://funthomas424242.github.com/rades/
 
-**Maven Repositories**
+Maven Repositories
+------------------
 
- - snapshot repository: https://repository-funthomas424242.forge.cloudbees.com/snapshot/
- - release repository: https://repository-funthomas424242.forge.cloudbees.com/release/
+**Snapshot**: https://repository-funthomas424242.forge.cloudbees.com/snapshot/
 
-**Project sources on GitHub:** https://github.com/funthomas424242/rades/
+**Release**: https://repository-funthomas424242.forge.cloudbees.com/release/
+
+Build powered by:
+
+![CloudBees](http://web-static-cloudfront.s3.amazonaws.com/images/badges/BuiltOnDEV.png)
 
