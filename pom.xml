@@ -20,6 +20,11 @@
 		<fop-hyph.version>1.2</fop-hyph.version>
 
 		<maven-assembly-plugin.version>2.2.1</maven-assembly-plugin.version>
+
+		<!-- aktuelles Datum (Workaround)>
+		<maven.build.timestamp.format>yyMMdd</maven.build.timestamp.format>
+		<buildNumber>${maven.build.timestamp}</buildNumber-->
+
 	</properties>
 
 
@@ -130,7 +135,7 @@
 							<name>projectversion</name>
 							<value>${project.version}</value>
 						</parameter>
-						<parameter> 
+						<parameter>
 							<name>imageicon</name>
 							<value>images/dbx/fsfe-logo_bgreen_fellow.png</value>
 						</parameter>
