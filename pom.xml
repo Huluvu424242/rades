@@ -35,19 +35,27 @@
 
 	<profiles>
 		<profile>
-			<id>hudson</id>
-			<properties>
-				<testonly>false</testonly>
-			</properties>
-		</profile>
-		<profile>
 			<id>local</id>
+			<activation>
+				<property>
+					<name>runninglocal</name>
+					<value>true</value>
+				</property>
+			</activation>
 			<properties>
 				<testonly>true</testonly>
 			</properties>
+		</profile>
+		<profile>
+			<!-- the profile is only active if no other profile is active. -->
+			<!-- locally allways a profile must be active. -->
+			<id>hudson</id>
 			<activation>
 				<activeByDefault>true</activeByDefault>
 			</activation>
+			<properties>
+				<testonly>false</testonly>
+			</properties>
 		</profile>
 	</profiles>
 
@@ -180,7 +188,7 @@
 					</description>
 					<override>true</override>
 					<includeAttached>true</includeAttached>
-					<dryRun>$testonly}</dryRun>
+					<dryRun>${testonly}</dryRun>
 				</configuration>
 				<executions>
 					<execution>
@@ -197,7 +205,7 @@
 				<version>0.6</version>
 				<configuration>
 					<message>Building site for ${project.version}</message>
-					<dryRun>$testonly}</dryRun>
+					<dryRun>${testonly}</dryRun>
 				</configuration>
 				<executions>
 					<execution>
