@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section version="5.0" xmlns="http://docbook.org/ns/docbook"
+         xmlns:xlink="http://www.w3.org/1999/xlink"
+         xmlns:xi="http://www.w3.org/2001/XInclude"
+         xmlns:ns5="http://www.w3.org/2000/svg"
+         xmlns:ns4="http://www.w3.org/1998/Math/MathML"
+         xmlns:ns3="http://www.w3.org/1999/xhtml"
+         xmlns:db="http://docbook.org/ns/docbook">
+  <title>Produktbeschreibung</title>
+
+  <section>
+    <title>Produktkarton</title>
+
+    <para><figure>
+        <title>RADeS Produktkarton</title>
+
+        <mediaobject>
+          <imageobject>
+            <imagedata contentwidth="2in"
+                       fileref="images/RADeSProduktkarton.png"/>
+          </imageobject>
+        </mediaobject>
+      </figure></para>
+  </section>
+
+  <section>
+    <title>Funktionale Anforderungen</title>
+
+    <para>
+    
+    </para>
+  </section>
+
+  <section>
+    <title>Einsatzgebiet</title>
+
+    <para>RADeS ist für den Einsatz in kleinen Teams gedacht. Als
+    Standardeinsatzfall wird von Feature Teams mit ca. 8 Entwicklern
+    ausgegangen. Es wird vorrausgesetz, dass im Team eine Spezialisierung der
+    Entwickler in folgende Gruppen vorhanden ist:</para>
+
+    <variablelist>
+      <varlistentry>
+        <term>GUI Entwickler</term>
+
+        <listitem>
+          <para>Entwickler mit vertieften Kenntnissen aus dem Frontend
+          Bereich. Diese modellieren die Eye View und binden die DSLs anderer
+          Schichten ein.</para>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term>Datenbank Entwickler</term>
+
+        <listitem>
+          <para>Entwickler mit vertieften Kenntnissen aus dem Pereich der
+          Datenbanken. Sehr gute SQL- und Datenbank Kenntnisse sowie ein
+          tieferes Verständnis für Object-Relationales Mapping sind hier
+          vorherrschend.</para>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term>Backend Entwickler</term>
+
+        <listitem>
+          <para>Entwickler mit vertieften Kenntnissen im Bereich der
+          Applikationserver. Es wird ein sehr gutes Verständnis für die
+          Entwicklung in Containergesteuerten Umgebungen sowie in verteilten
+          Systemen vorrausgesetzt. Weiterhin wird erwartet, dass die
+          Entwickler mit Enterprise Technologien wie EJB, CDI und
+          marktüblichen Frameworks wie aktuell Spring vertraut sind.</para>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+
+    <para>RADeS soll bevorzugt agile Arbeitsweisen unterstützen. So soll
+    beispielsweise ein Arbeiten nach der Flow Design Methode direkt möglich
+    sein und durch Sprachkonstrukte unterstützt werden.</para>
+  </section>
+</section>
