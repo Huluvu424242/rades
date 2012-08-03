@@ -33,7 +33,7 @@
 
 	<properties>
 		<!-- general -->
-		<testonly>true</testonly>
+		<testonly>false</testonly>
 		<user.jdk-version>1.6</user.jdk-version>
 		<github.global.userName>${env.gituser}</github.global.userName>
 		<github.global.password>${env.gitpassword}</github.global.password>
