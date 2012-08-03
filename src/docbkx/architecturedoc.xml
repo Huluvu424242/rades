@@ -57,6 +57,8 @@
             </imageobject>
           </mediaobject>
         </figure></para>
+
+      <para>[Funktionale Anforderungen]</para>
     </section>
 
     <section>
@@ -146,7 +148,7 @@
       vor allem meine Anforderungen erfüllen.</para>
 
       <para>Weitere wichtige Stakeholder sind alle Open Source Entwickler
-      weltweit, welche in den Bereichen Domain Driven Development oder Model
+      weltweit, welche in den Bereichen Domän Driven Development oder Model
       Driven Development arbeiten bzw. Java Entwickler die das System nutzen
       wollen um schneller von der Anforderung zum fertigen Programm zu
       kommen.</para>
@@ -200,124 +202,92 @@
     <section>
       <title>Organisatorische Randbedingungen</title>
 
-      <para>Maven projects are configured using a Project Object Model, which
-      is stored in a <filename>pom.xml</filename> -file. Here's a minimal
-      example:</para>
+      <para>RADeS ist für den Einsatz in kleinen Teams gedacht. Als
+      Standardeinsatzfall wird von Feature Teams mit ca. 8 Entwicklern
+      ausgegangen. Es wird vorrausgesetz, dass im Team eine Spezialisierung
+      der Entwickler in folgende Gruppen vorhanden ist:</para>
 
-      <example>
-        <title>Maven Example</title>
+      <variablelist>
+        <varlistentry>
+          <term>GUI Entwickler</term>
 
-        <programlisting language="xml">&lt;project&gt;
-					&lt;!-- model
-					version is always 4.0.0 for Maven 2.x POMs --&gt;
-					&lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt;
+          <listitem>
+            <para>Entwickler mit vertieften Kenntnissen aus dem Frontend
+            Bereich. Diese modellieren die Eye View und binden die DSLs
+            anderer Schichten ein. </para>
+          </listitem>
+        </varlistentry>
 
-					&lt;!-- project
-					coordinates, i.e. a group of values which
-					uniquely identify this
-					project --&gt;
-					&lt;groupId&gt;com.mycompany.app&lt;/groupId&gt;
-					&lt;artifactId&gt;my-app&lt;/artifactId&gt;
-					&lt;version&gt;1.0&lt;/version&gt;
+        <varlistentry>
+          <term>Datenbank Entwickler</term>
 
-					&lt;!-- library dependencies
-					--&gt;
-					&lt;dependencies&gt;
-					&lt;dependency&gt;
+          <listitem>
+            <para>Entwickler mit vertieften Kenntnissen aus dem Pereich der
+            Datenbanken. Sehr gute SQL- und Datenbank Kenntnisse sowie ein
+            tieferes Verständnis für Object-Relationales Mapping sind hier
+            vorherrschend. </para>
+          </listitem>
+        </varlistentry>
 
-					&lt;!-- coordinates of
-					the required library --&gt;
-					&lt;groupId&gt;junit&lt;/groupId&gt;
-					&lt;artifactId&gt;junit&lt;/artifactId&gt;
-					&lt;version&gt;3.8.1&lt;/version&gt;
+        <varlistentry>
+          <term>Backend Entwickler</term>
 
-					&lt;!--this dependency is only
-					used for running and compiling tests--&gt;
-					&lt;scope&gt;test&lt;/scope&gt;
+          <listitem>
+            <para>Entwickler mit vertieften Kenntnissen im Bereich der
+            Applikationserver. Es wird ein sehr gutes Verständnis für die
+            Entwicklung in Containergesteuerten Umgebungen sowie in verteilten
+            Systemen vorrausgesetzt. Weiterhin wird erwartet, dass die
+            Entwickler mit Enterprise Technologien wie EJB, CDI und
+            marktüblichen Frameworks wie aktuell Spring vertraut sind. </para>
+          </listitem>
+        </varlistentry>
+      </variablelist>
 
-					&lt;/dependency&gt;
-					&lt;/dependencies&gt;
-					&lt;/project&gt;</programlisting>
-      </example>
-
-      <para>This POM only defines a unique identifier for the project (
-      <emphasis>coordinates</emphasis> ) and its dependency on the JUnit
-      framework. However, that is already enough for building the project and
-      running the unit tests associated with the project. Maven accomplishes
-      this by embracing the idea of Convention over Configuration, that is,
-      Maven provides default values for the project's configuration. The
-      directory structure of a normal idiomatic Maven project has the
-      following directory entries:</para>
-
-      <informaltable>
-        <tgroup cols="2">
-          <colspec colwidth="*"/>
-
-          <colspec colwidth="*"/>
-
-          <tbody>
-            <row>
-              <entry>Directory name</entry>
-
-              <entry>Purpose</entry>
-            </row>
-
-            <row>
-              <entry>project home</entry>
-
-              <entry>Contains the pom.xml and all subdirectories.</entry>
-            </row>
-
-            <row>
-              <entry>src/main/java</entry>
-
-              <entry>Contains the deliverable Java sourcecode for the
-              project.</entry>
-            </row>
-
-            <row>
-              <entry>src/main/resources</entry>
-
-              <entry>Contains the deliverable resources for the project, such
-              as property files.</entry>
-            </row>
-
-            <row>
-              <entry>src/test/java</entry>
-
-              <entry>Contains the testing classes (JUnit or TestNG test cases,
-              for example) for the project.</entry>
-            </row>
-
-            <row>
-              <entry>src/test/resources</entry>
-
-              <entry>Contains resources necessary for testing.</entry>
-            </row>
-          </tbody>
-        </tgroup>
-      </informaltable>
-
-      <para>Then the command</para>
-
-      <programlisting>mvn package</programlisting>
-
-      <para>will compile all the Java files, run any tests, and package the
-      deliverable code and resources into
-      <filename>target/my-app-1.0.jar</filename> (assuming the artifactId is
-      my-app and the version is 1.0.) Using Maven itself, the user provides
-      only configuration for the project, while the configurable plug-ins do
-      the actual work of compiling the project, cleaning target directories,
-      running unit tests, generating API documentation and so on. In general,
-      users should not have to write plugins themselves. Contrast this with
-      Ant and make in which one writes imperative procedures for doing the
-      aforementioned tasks.</para>
+      <para>RADeS soll bevorzugt agile Arbeitsweisen unterstützen. So soll
+      beispielsweise ein Arbeiten nach der Flow Design Methode direkt möglich
+      sein und durch Sprachkonstrukte unterstützt werden. </para>
     </section>
 
     <section>
       <title>Konventionen</title>
 
-      <para/>
+      <variablelist>
+        <varlistentry>
+          <term>Generierung vs. Kodierung</term>
+
+          <listitem>
+            <para>Es wird davon ausgegangen, dass durch RADeS nur ein Teil des
+            Quellkodes vom Zielprogramm generiert werden kann. Der
+            verbleibende Teil muss auf klassischer Weise durch den Entwickler
+            händisch kodiert werden. Da ein Reafactoring im Modell über die
+            Generierung durchaus erhebliche Änderungen im Kompilat hervorrufen
+            kann, sind Abhängigkeiten handkodierter Programmteile von
+            generierten Programmteilen zu vermeiden. </para>
+
+            <para>Aus diesem Grund werden die generierten Programmteile stets
+            in separaten Artifakten bereitgestellt. Diese Artifakten dürfen
+            Abhängigkeiten zu handkodierten Artifakten besitzen, umgekehrt
+            jedoch nicht. Um dem Generator die handkodierten Artifakte bekannt
+            zu machen sind im Modell geeignete Konstrukte zur Verfügung zu
+            stellen. </para>
+          </listitem>
+        </varlistentry>
+
+        <varlistentry>
+          <term>Modellierung Fachlich vs. Technisch</term>
+
+          <listitem>
+            <para>Die in RADeS zur Spezifikation Verwendung findenden Modelle
+            sind eher technischer Natur. RADeS erhebt nicht den Anspruch rein
+            fachliche Modellierung zu ermöglichen. Es wird angenommen, dass
+            eine rein fachliche Modellierung generell nicht möglich ist. Wohl
+            aber soll eine fachliche Domän mit technischen Ausdrucksmitteln
+            modelliert werden können. </para>
+
+            <para/>
+          </listitem>
+        </varlistentry>
+      </variablelist>
     </section>
   </chapter>
 
@@ -390,7 +360,17 @@
   <chapter>
     <title>Glossar</title>
 
-    <para/>
+    <variablelist>
+      <varlistentry>
+        <term>Domän</term>
+
+        <listitem>
+          <para>Fachlich zusammengehöriger Bereich. In einem Firmenportal
+          könnten Kundenverwaltung, Angebotsverwaltung und Materialverwaltung
+          als drei fachliche Domänen verstanden werden. </para>
+        </listitem>
+      </varlistentry>
+    </variablelist>
   </chapter>
 
   <bibliography>
