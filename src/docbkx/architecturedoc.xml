@@ -170,82 +170,129 @@
     <section>
       <title>Technische Randbedingungen</title>
 
-      <para>Maven is a build automation tool typically used for Java projects.
-      Maven serves a similar purpose to the Apache Ant tool, but it is based
-      on different concepts and works in a profoundly different manner. It can
-      also be used to build and manage projects written in C#, Ruby, Scala,
-      and other languages. Maven is hosted by the Apache Software Foundation,
-      where it was formerly part of the Jakarta Project.</para>
+      <variablelist>
+        <varlistentry>
+          <term>Programmiersprache</term>
 
-      <para>Maven uses an XML file to describe the software project being
-      built, its dependencies on other external modules and components, the
-      build order, directories, and required plug-ins. It comes with
-      pre-defined targets for performing certain well-defined tasks such as
-      compilation of code and its packaging.</para>
+          <listitem>
+            <para>Für die Entwicklung wird als Programmiersprache Java
+            eingesetzt.</para>
+          </listitem>
+        </varlistentry>
 
-      <para>Maven dynamically downloads Java libraries and Maven plug-ins from
-      one or more repositories such as the Maven 2 Central Repository. This
-      local cache of downloaded artifacts can also be updated with artifacts
-      created by local projects. Public repositories can also be
-      updated.</para>
+        <varlistentry>
+          <term>Versionsverwaltung</term>
 
-      <para>Maven is built using a plugin-based architecture that allows it to
-      make use of any application controllable through standard input.
-      Theoretically, this would allow anyone to write plugins to interface
-      with build tools (compilers, unit test tools, etc.) for any other
-      language. In reality, support and use for languages other than Java has
-      been minimal. Currently a plugin for the .NET framework exists and is
-      maintained, and a C/C++ native plugin is maintained for Maven 2
-      maven-native and maven-nar.</para>
+          <listitem>
+            <para>Als Versionsverwaltung kommt Git zum Einsatz. Als Hoster
+            eignet sich Github. Über Github lassen sich auch die Bugtracking
+            und Projekt Homepage realisieren. </para>
+          </listitem>
+        </varlistentry>
+
+        <varlistentry>
+          <term>Build und Deployment</term>
+
+          <listitem>
+            <para>Für Build- und Deployment prozesse soll initial mit Maven 3
+            gestartet werden. Später soll ein anderes Werkzeug zum Einsatz
+            kommen. </para>
+          </listitem>
+        </varlistentry>
+
+        <varlistentry>
+          <term>Continious Integration</term>
+
+          <listitem>
+            <para>Für die Realisierung des CI Prozesses soll Jenkins in Form
+            eines SaaS zum Einsatz kommen. Als Hoster eignet sich
+            CloudBees.</para>
+          </listitem>
+        </varlistentry>
+      </variablelist>
     </section>
 
     <section>
       <title>Organisatorische Randbedingungen</title>
 
-      <para>RADeS ist für den Einsatz in kleinen Teams gedacht. Als
-      Standardeinsatzfall wird von Feature Teams mit ca. 8 Entwicklern
-      ausgegangen. Es wird vorrausgesetz, dass im Team eine Spezialisierung
-      der Entwickler in folgende Gruppen vorhanden ist:</para>
+      <section>
+        <title>Organisation und Struktur</title>
 
-      <variablelist>
-        <varlistentry>
-          <term>GUI Entwickler</term>
+        <para>RADeS soll als Open Source Projekt im Internet entwickelt
+        werden. Die Infrastruktur soll generell eine weltweite, verteilte
+        Entwicklung ermöglichen. Initial wird das Projekt mit Fokus auf den
+        deutschen Sprachraum gestartet. Daher erfolgt die Kommunikation und
+        Dokumentation auch in deutscher Sprache. Das Projektinhalt und -ziele
+        werden vom Initiator vorgegeben. </para>
 
-          <listitem>
-            <para>Entwickler mit vertieften Kenntnissen aus dem Frontend
-            Bereich. Diese modellieren die Eye View und binden die DSLs
-            anderer Schichten ein. </para>
-          </listitem>
-        </varlistentry>
+        <para>Sollte eine internationale Community entstehen ist die
+        Kommunikation auf englisch umzustellen und bei ausreichend großer
+        Community ein Entscheidungsprozess für die Bestimmung zu
+        realisierender Feature zu etablieren. </para>
+      </section>
 
-        <varlistentry>
-          <term>Datenbank Entwickler</term>
+      <section>
+        <title>Resourcen</title>
 
-          <listitem>
-            <para>Entwickler mit vertieften Kenntnissen aus dem Pereich der
-            Datenbanken. Sehr gute SQL- und Datenbank Kenntnisse sowie ein
-            tieferes Verständnis für Object-Relationales Mapping sind hier
-            vorherrschend. </para>
-          </listitem>
-        </varlistentry>
+        <para>Für die Entwicklung des Systems stehen keine finanziellen Mittel
+        bereit und eine professionelle Finanzierung ala Crowdfunding ist nicht
+        angedacht. </para>
 
-        <varlistentry>
-          <term>Backend Entwickler</term>
+        <para>Zur Verfügung stehen initial ein Entwickler und die frei im
+        Internet verfügbaren Resourcen wie Github, CloudBees, Google etc. Über
+        Github können Versionsverwaltung, Bugtracking und Webseite realisiert
+        werden. </para>
+      </section>
 
-          <listitem>
-            <para>Entwickler mit vertieften Kenntnissen im Bereich der
-            Applikationserver. Es wird ein sehr gutes Verständnis für die
-            Entwicklung in Containergesteuerten Umgebungen sowie in verteilten
-            Systemen vorrausgesetzt. Weiterhin wird erwartet, dass die
-            Entwickler mit Enterprise Technologien wie EJB, CDI und
-            marktüblichen Frameworks wie aktuell Spring vertraut sind. </para>
-          </listitem>
-        </varlistentry>
-      </variablelist>
+      <section>
+        <title>Einsatzgebiet -&gt; fachliche Anforderung</title>
 
-      <para>RADeS soll bevorzugt agile Arbeitsweisen unterstützen. So soll
-      beispielsweise ein Arbeiten nach der Flow Design Methode direkt möglich
-      sein und durch Sprachkonstrukte unterstützt werden. </para>
+        <para>RADeS ist für den Einsatz in kleinen Teams gedacht. Als
+        Standardeinsatzfall wird von Feature Teams mit ca. 8 Entwicklern
+        ausgegangen. Es wird vorrausgesetz, dass im Team eine Spezialisierung
+        der Entwickler in folgende Gruppen vorhanden ist:</para>
+
+        <variablelist>
+          <varlistentry>
+            <term>GUI Entwickler</term>
+
+            <listitem>
+              <para>Entwickler mit vertieften Kenntnissen aus dem Frontend
+              Bereich. Diese modellieren die Eye View und binden die DSLs
+              anderer Schichten ein.</para>
+            </listitem>
+          </varlistentry>
+
+          <varlistentry>
+            <term>Datenbank Entwickler</term>
+
+            <listitem>
+              <para>Entwickler mit vertieften Kenntnissen aus dem Pereich der
+              Datenbanken. Sehr gute SQL- und Datenbank Kenntnisse sowie ein
+              tieferes Verständnis für Object-Relationales Mapping sind hier
+              vorherrschend.</para>
+            </listitem>
+          </varlistentry>
+
+          <varlistentry>
+            <term>Backend Entwickler</term>
+
+            <listitem>
+              <para>Entwickler mit vertieften Kenntnissen im Bereich der
+              Applikationserver. Es wird ein sehr gutes Verständnis für die
+              Entwicklung in Containergesteuerten Umgebungen sowie in
+              verteilten Systemen vorrausgesetzt. Weiterhin wird erwartet,
+              dass die Entwickler mit Enterprise Technologien wie EJB, CDI und
+              marktüblichen Frameworks wie aktuell Spring vertraut
+              sind.</para>
+            </listitem>
+          </varlistentry>
+        </variablelist>
+
+        <para>RADeS soll bevorzugt agile Arbeitsweisen unterstützen. So soll
+        beispielsweise ein Arbeiten nach der Flow Design Methode direkt
+        möglich sein und durch Sprachkonstrukte unterstützt werden.</para>
+      </section>
     </section>
 
     <section>
