@@ -10,7 +10,7 @@
 	<packaging>pom</packaging>
 
 	<name>RADeS - Rapid Application Development System</name>
-	<url>https://funthomas424242.github.com/rades</url>
+	<url>https://funthomas424242.github.com/RADeS</url>
 
 	<description>
 		RADeS steht für Rapid Application Development System - also 
@@ -104,7 +104,7 @@
 
 	<issueManagement>
 		<system>Issue</system>
-		<url>https://github.com/funthomas424242/rades/issues</url>
+		<url>https://github.com/funthomas424242/RADeS/issues</url>
 	</issueManagement>
 
 	<distributionManagement>
