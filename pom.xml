@@ -65,6 +65,9 @@
 		<github.global.userName>${env.gituser}</github.global.userName>
 		<github.global.password>${env.gitpassword}</github.global.password>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	
+		<!-- Dokumentnamen -->
+		<masterdokument>Architekturdokumentation</masterdokument>
 
 		<!-- Arbeitsverzeichnis des Docbkx-Plugins definieren -->
 		<workDirectory>${basedir}/target/work/docbkx</workDirectory>
@@ -180,7 +183,7 @@
 						<configuration>
 							<artifacts>
 								<artifact>
-									<file>${basedir}/target/docbkx/pdf/ArchitekturUebersicht.pdf</file>
+									<file>${basedir}/target/docbkx/pdf/${masterdokument}.pdf</file>
 									<type>pdf</type>
 								</artifact>
 							</artifacts>
@@ -308,7 +311,7 @@
 						</goals>
 						<configuration>
 							<!-- DocBook-Dokument angeben -->
-							<includes>ArchitekturUebersicht.dbk</includes>
+							<includes>${masterdokument}.dbk</includes>
 
 							<!-- Kopiert die notwendigen Sourcen -->
 							<preProcess>
