@@ -17,7 +17,7 @@
         <mediaobject>
           <imageobject>
             <imagedata contentwidth="2in"
-                       fileref="images/RADeSProduktkarton.png"/>
+                       fileref="../images/RADeSProduktkarton.png"/>
           </imageobject>
         </mediaobject>
       </figure></para>

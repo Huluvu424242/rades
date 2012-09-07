@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section version="5.0" xmlns="http://docbook.org/ns/docbook"
+         xmlns:xlink="http://www.w3.org/1999/xlink"
+         xmlns:xi="http://www.w3.org/2001/XInclude"
+         xmlns:ns5="http://www.w3.org/2000/svg"
+         xmlns:ns4="http://www.w3.org/1998/Math/MathML"
+         xmlns:ns3="http://www.w3.org/1999/xhtml"
+         xmlns:db="http://docbook.org/ns/docbook">
+			<title>Qualitätsziele</title>
+
+			<section>
+				<title>Bedienbarkeit</title>
+
+				<para>Von RADeS als eine Desktopanwendung welche für Entwickler als
+					Endnutzer gedacht ist wird eine sehr gute Bedienbarkeit erwartet.
+					Die
+					Anwendung muss sich intuitiv bedienen lassen und soll leicht zu
+					konfigurieren sein. Die Benutzeroberfläche soll als angenehm
+					empfunden
+					werden und muss sich wahlweise per Maus oder Tastatur bedienen lassen.
+				</para>
+			</section>
+
+			<section>
+				<title>Änderbarkeit</title>
+
+				<para>RADeS ist als Entwicklerwerkzeug in einem schnellebigen Markt
+					platziert. Es ist davon auszugehen, dass das Produkt ständigen
+					Anpassungen an sich änderende Technologien und Organisationsformen
+					unterworfen ist. Daher muss RADeS sehr leicht und ohne Erzeugung
+					größerer Aufwände anpassbar sein.
+				</para>
+
+				<para>Wesentlich wichtiger noch ist jedoch die Änderbarkeit der von
+					RADeS erstellten Programme. Diese sollten generell modular und
+					technologieneutral aufgebaut sein. So sollte der Austausch der
+					Persistenztechnologie per Option wählbar sein.
+				</para>
+			</section>
+
+			<section>
+				<title>Sicherheit</title>
+
+				<para>Bei der Benutzung von RADeS ist von einem Einsatz in
+					Mehrbenutzerumgebungen auszugehen. Daher sind Zugangsdaten oder
+					weitere Credentials vor dem Zugriff anderer Nutzer zu schützen.
+				</para>
+
+				<para>Ein Angriff aus dem Internet oder anderen Netzwerken ist nicht
+					zu berücksichtigen. Diese Gefahren sind vom Nutzer selbst am
+					Einsatzort über entsprechende Betriebsabteilungen sicherzustellen.
+				</para>
+			</section>
+
+			<section>
+				<title>Testbarkeit</title>
+
+				<para>RADeS soll generell automatisch testbar sein und auch durch
+					eine
+					automatische Testsuite für Regressionstests abgesichert werden.
+				</para>
+			</section>
+
+			<section>
+				<title>Verfügbarkeit</title>
+
+				<para>RADeS selbst ist ein Entwicklerwerkzeug und muss als solches
+					keinen Hochverfügbarkeitsansprüchen genügen. Wenn das Werkzeug
+					ausfällt, kann es problemlos neu gestartet werden. Ein Ausfall
+					führt
+					zwar zum Verlust von Arbeitszeit jedoch nicht von kritischen Resourcen
+					und führt auch nicht zu extrem negativer Aussenwirkung wie
+					beispielsweise beim Ausfall eines Onlinemarktes.
+				</para>
+
+				<para>Programme welche mit RADeS erstellt werden, sollten jedoch
+					auch
+					Hochverfügbarkeitsansprüchen genügen da mehrschichtige Anwendungen vor
+					allem im Enterprise Umfeld eingesetzt werden.
+				</para>
+			</section>
+
+			<section>
+				<title>Performanz</title>
+
+				<para>RADeS ist als Desktopanwendung zu sehen und muss nicht
+					tausende
+					von Anfragen pro Zeiteinheit abarbeiten. Daher ist das Produkt auch
+					nicht im Highperformance Sektor einzuordnen. Eine niedrige
+					Performance
+					ist soweit akzeptabel wie die Benutzbarkeit des Produktes nicht
+					darunter leidet. Wartezeiten im Nutzerdialog sind so gering wie
+					möglich zu halten. Wartezeiten bei Prozessen wie Generierung,
+					Compilierung oder Deployment sollten in für Desktopwerkzeuge
+					üblichen
+					Größenordnungen oder darunter liegen.
+				</para>
+			</section>
+		</section>

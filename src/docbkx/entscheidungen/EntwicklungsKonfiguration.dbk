@@ -6,13 +6,13 @@
          xmlns:ns4="http://www.w3.org/1998/Math/MathML"
          xmlns:ns3="http://www.w3.org/1999/xhtml"
          xmlns:db="http://docbook.org/ns/docbook">
-  <title>Welche Entwicklungskonfiguration wird genutzt?</title>
+  <title>Welche Entwicklungskonfiguration?</title>
 
   <section>
     <title>Zur Fragestellung</title>
 
-    <para>Hiermit ist gemeint ob wir uns für OSGI Bundles, JSPs, JSFs, HTMLs,
-    mBean, EnterpriseBeans oder was auch immer entscheiden.</para>
+    <para>Bei der Frage geht es um die Konfiguration des
+    Entwicklungsrechners.</para>
   </section>
 
   <section>
@@ -110,7 +110,7 @@
 
           <para>Dieser Schritt benötigt vergleichsweise wenig Zeit. Abhängig
           von der Anwendungslogik zum Login kann der Browser auch im
-          Hintergrund laufen gelassen werden. </para>
+          Hintergrund laufen gelassen werden.</para>
         </listitem>
 
         <listitem>
