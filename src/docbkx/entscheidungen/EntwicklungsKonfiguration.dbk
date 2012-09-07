@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section version="5.0" xmlns="http://docbook.org/ns/docbook"
+         xmlns:xlink="http://www.w3.org/1999/xlink"
+         xmlns:xi="http://www.w3.org/2001/XInclude"
+         xmlns:ns5="http://www.w3.org/2000/svg"
+         xmlns:ns4="http://www.w3.org/1998/Math/MathML"
+         xmlns:ns3="http://www.w3.org/1999/xhtml"
+         xmlns:db="http://docbook.org/ns/docbook">
+  <title>Welche Entwicklungskonfiguration wird genutzt?</title>
+
+  <section>
+    <title>Zur Fragestellung</title>
+
+    <para>Hiermit ist gemeint ob wir uns für OSGI Bundles, JSPs, JSFs, HTMLs,
+    mBean, EnterpriseBeans oder was auch immer entscheiden.</para>
+  </section>
+
+  <section>
+    <title>Relevante Einflußfaktoren</title>
+
+    <itemizedlist>
+      <listitem>
+        <para>Zeitdauer der Iterationen bei Änderungen während der Entwicklung
+        und Anpassung von Kode.</para>
+      </listitem>
+    </itemizedlist>
+  </section>
+
+  <section>
+    <title>Annahmen</title>
+
+    <para>Es wird angenommen, dass letztlich eine größere Anwendung entsteht
+    mit vielen Tausend LOCs. Weiterhin wird angenommen, dass sich der OSGI
+    Container bei großen Anwendungen ähnlich wie bei kleinen Anwendungen
+    verhält, da immer nur kleine Teile (Bundles) zu starten, zu stoppen und
+    auszustauschen sind.</para>
+  </section>
+
+  <section>
+    <title>Betrachtete Alternativen</title>
+
+    <para>Als Alternativen wurden folgende Konfigurationen betrachtet:</para>
+
+    <orderedlist>
+      <listitem>
+        <para>Eclipse, JRebel, Oracle Applicationsserver, Maven (praktische
+        Erfahrungen liegen vor)</para>
+      </listitem>
+
+      <listitem>
+        <para>Eclipse, BNDTools, Apache Felix, Maven (es liegen keine
+        praktischen Erfahrungen vor)</para>
+      </listitem>
+    </orderedlist>
+
+    <section>
+      <title>Deployment in einen Applikationsserver</title>
+
+      <para>Es wurden die vorhandenen Erfahrungen ausgewertet. Es lagen nur
+      Erfahrungen mit folgender Systemkonfiguration vor:</para>
+
+      <variablelist>
+        <varlistentry>
+          <term>IDE</term>
+
+          <listitem>
+            <para>Eclipse</para>
+          </listitem>
+        </varlistentry>
+
+        <varlistentry>
+          <term>Applikationsserver</term>
+
+          <listitem>
+            <para>Oracle Weblogic 10</para>
+          </listitem>
+        </varlistentry>
+      </variablelist>
+
+      <para>(+)</para>
+
+      <para>Dieses Konzept ist bekannt, sowohl mit seinen Vor- wie auch mit
+      seinen Nachteilen. Es hat sich in der Praxis bereits als trägfähig
+      erwiesen und beinhaltet somit nur ein sehr geringes Risiko.</para>
+
+      <para>(-)</para>
+
+      <para>Zeitdauer bis der Entwickler Feedback zur gerade implementierten
+      Änderung bekommt. Bei typischen Applikationserver Anwendungen sind
+      folgende Schritte im Entwicklungsprozess notwendig:</para>
+
+      <orderedlist>
+        <listitem>
+          <para>Start des Servers</para>
+
+          <para>Dieser Schritt benötigt bei großen Anwendungen die wenigste
+          Zeitdauer (meist ein Bruchteil des Deployments).</para>
+        </listitem>
+
+        <listitem>
+          <para>Deployment der Anwendung</para>
+
+          <para>Dieser Schritt dauert schon bei kleinen Anwendungen lange,
+          allerdings steigert sich die Zeitdauer mit der Größe und der Anzahl
+          neuer Deployments ständig.</para>
+        </listitem>
+
+        <listitem>
+          <para>Start des Browsers</para>
+
+          <para>Dieser Schritt benötigt vergleichsweise wenig Zeit. Abhängig
+          von der Anwendungslogik zum Login kann der Browser auch im
+          Hintergrund laufen gelassen werden. </para>
+        </listitem>
+
+        <listitem>
+          <para>Anmeldung an der Anwendung</para>
+
+          <para>Dieser Schritt ist nur bei manchen Anwendungen
+          notwendig.</para>
+        </listitem>
+
+        <listitem>
+          <para>Vor der nächsten Änderung ist der Server zu stoppen oder die
+          Anwendung aus dem Server zu entfernen (undeployment).</para>
+
+          <para>Dieser Schritt ist in der Regel notwendig da sonst nicht
+          nachvollziehbare Fehler im Deployment (Caching Probleme, alte
+          Klassen, alte Webseiten, ...) auftreten können.</para>
+        </listitem>
+      </orderedlist>
+
+      <para>Durch den Einsatz von spezialisierten Werkzeugen wie JRebell kann
+      das Hotdeployment deutlich verbessert werden. Allerdings funktioniert
+      dies nicht zuverlässig in allen Fällen. In folgenden Fällen ist ein
+      erneutes Deployment notwendig:</para>
+
+      <itemizedlist>
+        <listitem>
+          <para>Einfügen, Löschen oder Änderungen an Konstanten im Java
+          Kode.</para>
+        </listitem>
+
+        <listitem>
+          <para>Änderungen an statische Initialisierungsblöcken</para>
+        </listitem>
+
+        <listitem>
+          <para>Änderungen an grundlegenden Konfigurationen (Spring
+          Konfiguration, web.xml, ...)</para>
+        </listitem>
+      </itemizedlist>
+    </section>
+
+    <section>
+      <title>Deployment in einen OSGI Container</title>
+
+      <para>Hierzu liegen keine praktischen Erfahrungen vor. Auf Grund der
+      Informationen über die OSGI Technologie werden folgende Vor- und
+      Nachteile als gegeben angenommen.</para>
+
+      <para>Generell lassen sich über einen OSGI Container ebenfalls
+      Webapplikationen entwickeln. Jedoch können die in den Container zu
+      deployenden Teile deutlich kleiner gehalten werden.</para>
+
+      <para>(+)</para>
+
+      <para>Der OSGI Container braucht in der Entwicklung nicht gestoppt
+      werden, er kann kontinuierlich laufen. Über die BNDTools kann der
+      Container direkt innerhalb von Eclipse gestartet werden. Bei Änderungen
+      müssen nur die veränderten Bundles neu deployed werden. Das sind in der
+      Regel deutlich kleinere Teile als die komplette Anwendung.</para>
+
+      <para>(-)</para>
+
+      <para>Bei einer Entscheidung für den OSGI Container besteht das Risiko,
+      dass später auf einen Applikationsserver umgestellt werden muss. Dies
+      gilt zumindest wenn das Konzept OSGI sich als nicht trägfähig
+      erweist.</para>
+    </section>
+  </section>
+
+  <section>
+    <title>Entscheidung</title>
+
+    <para>Es wird sich für den Einsatz des OSGI Containers entschieden auch
+    wenn dies ein größeres Risiko hinsichtlich des zu veranschlagenden
+    Entwicklungsaufwandes birgt.</para>
+  </section>
+</section>

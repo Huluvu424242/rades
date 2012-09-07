@@ -47,7 +47,7 @@
 		</section>
 
 
-		<xi:include href="FunktionaleAnforderungen.dbk" />
+		<xi:include href="anforderungen/FunktionaleAnforderungen.dbk" />
 
 
 
@@ -365,10 +365,12 @@
 	</chapter>
 
 	<chapter>
-		<title>Architekturentscheidungen</title>
-
-		<para />
+		<title>ArchitekturEntscheidungen</title>
+		
+		<xi:include href="entscheidungen/EntwicklungsKonfiguration.dbk" />
 	</chapter>
+	
+	
 
 	<chapter>
 		<title>Qualitätsszenarien</title>
@@ -399,6 +401,7 @@
 			</varlistentry>
 		</variablelist>
 	</chapter>
+
 
 	<bibliography>
 		<title>Referenzen</title>
@@ -547,4 +550,5 @@
 			</title>
 		</bibliomixed>
 	</bibliography>
+	
 </book>
