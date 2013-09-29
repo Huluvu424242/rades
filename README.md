@@ -9,7 +9,7 @@ RADeS is build on EMEL architecture, which based on the following DSLs:
  - MSM DSL to describe the Multi Service Model of the Middle Layer.
  - ERM DSL to describe the Entity Relation Model of the Entity Layer.
  
-**Build on Jenkins**: [![Build Status](https://funthomas424242.ci.cloudbees.com/job/RADeS/badge/icon)](https://funthomas424242.ci.cloudbees.com/job/RADeS/)
+**Build on Jenkins**: [![Build Status](https://funthomas424242.ci.cloudbees.com/buildStatus/icon?job=RADeS)](https://funthomas424242.ci.cloudbees.com/job/RADeS/)
  
 **Project Site:** http://funthomas424242.github.com/RADeS/
 
