@@ -34,7 +34,7 @@
 		</license>
 	</licenses>
 
-	
+
 
 	<dependencies>
 		<dependency>
@@ -47,6 +47,7 @@
 
 
 	<build>
+		<sourceDirectory>src/main/java</sourceDirectory>
 
 	</build>
 
