@@ -145,15 +145,25 @@
 						<target>1.8</target>
 					</configuration>
 				</plugin>
-				<!-- <plugin>
-					<groupId>com.github.github</groupId>
-					<artifactId>downloads-maven-plugin</artifactId>
-					<version>${github.maventools.version}</version>
-				</plugin> -->
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-site-plugin</artifactId>
+					<version>3.5</version>
+				</plugin>
 				<plugin>
 					<groupId>com.github.github</groupId>
 					<artifactId>site-maven-plugin</artifactId>
 					<version>${github.maventools.version}</version>
+					<configuration>
+						<message>Building site for ${project.version}</message>
+						<dryRun>${testonly}</dryRun>
+						<noJekyll>true</noJekyll>
+						<merge>true</merge>
+						<repositoryName>${github.site.repositoryName}</repositoryName>
+						<repositoryOwner>${github.site.repositoryOwner}</repositoryOwner>
+						<userName>${github.global.userName}</userName>
+						<password>${github.global.password}</password>
+					</configuration>
 				</plugin>
 			</plugins>
 		</pluginManagement>
