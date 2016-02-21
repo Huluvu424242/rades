@@ -70,7 +70,7 @@
 
 		<!-- Versionen der DocBook-Komponenten -->
 		<rades-docbook-style.version>1.0.0-SNAPSHOT</rades-docbook-style.version>
-		<docbkx-maven-plugin.version>2.0.13</docbkx-maven-plugin.version>
+		<docbkx-maven-plugin.version>2.0.14</docbkx-maven-plugin.version>
 		<docbook.version>5.0-all</docbook.version>
 		<fop-hyph.version>1.2</fop-hyph.version>
 
@@ -123,7 +123,7 @@
 						<configuration>
 							<artifacts>
 								<artifact>
-									<file>${basedir}/target/docbkx/pdf/${masterdokument}.pdf</file>
+									<file>${project.build.directory}/site/${project.artifactId}/${masterdokument}.pdf</file>
 									<type>pdf</type>
 								</artifact>
 							</artifacts>
@@ -134,6 +134,7 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-site-plugin</artifactId>
+				<version>${mvn.siteplugin.version}</version>
 				<configuration>
 					<locales>
 						de
@@ -143,6 +144,13 @@
 			<plugin>
 				<groupId>com.github.github</groupId>
 				<artifactId>site-maven-plugin</artifactId>
+				<dependencies>
+					<dependency>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-site-plugin</artifactId>
+						<version>${mvn.siteplugin.version}</version>
+					</dependency>
+				</dependencies>
 				<configuration>
 					<message>Building site for ${project.version}</message>
 					<dryRun>${testonly}</dryRun>
@@ -241,7 +249,7 @@
 								</copy>
 
 								<!-- Kopiert Bilder fuer die HTML-Version -->
-								<copy todir="${basedir}/target/docbkx/html/images">
+								<copy todir="${project.build.directory}/site/${project.artifactId}/html/images">
 									<fileset dir="${workDirectory}/images">
 										<exclude name="**/*.pdf" />
 									</fileset>
@@ -249,13 +257,13 @@
 								<!-- Kopiert Bilder fuer die Webhelp-Version. Muss angepasst werden, 
 									wenn sich der Name des DocBook-Dokuments ändert. -->
 								<copy
-									todir="${basedir}/target/docbkx/webhelp/architecturedoc/content/images">
+									todir="${project.build.directory}/site/${project.artifactId}/webhelp/architecturedoc/content/images">
 									<fileset dir="${workDirectory}/images">
 										<exclude name="**/*.pdf" />
 									</fileset>
 								</copy>
 								<!-- Kopiert CSS-Styles fuer die HTML-Version -->
-								<copy todir="${basedir}/target/docbkx/html/styles">
+								<copy todir="${project.build.directory}/site/${project.artifactId}/html/styles">
 									<fileset dir="${workDirectory}/styles">
 										<include name="*.css" />
 									</fileset>
@@ -268,6 +276,7 @@
 				<configuration>
 					<!-- Arbeitsverzeichnis festlegen -->
 					<sourceDirectory>${workDirectory}</sourceDirectory>
+					<targetDirectory>${project.build.directory}/site/${project.artifactId}</targetDirectory>
 
 					<!-- Zusaetzliche XSLT Parameter -->
 					<customizationParameters>
