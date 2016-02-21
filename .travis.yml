@@ -12,4 +12,4 @@ env:
     - secure: KqodmvTlz0wkPUw2gRMA1LeHT0qiyCVPivh7nZfDlnOVPBZJ+fVfVAcHuebHf55j2sUWQvkmLA9qEHr7xdULaaDMnX9+KC34lO09+mTw/VhNx1uHwOG/+CPSxFzxz8bVQAMapg9qFannI/afT7xakIEjTjoiRDFpjowM9sYmOwI=
 
 script:
-   - cd mvn -Phudson clean install site
+   - mvn -Phudson clean install site
