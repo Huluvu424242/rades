@@ -8,8 +8,8 @@ jdk:
 
 env:
   global:
-    - secure: T+BLyG9JHbbZTwucPcWb81Wenvbisd8nUeFn5iHUnxjH4ybbRowdWpQsCQ8O9V/rhR50F/Of4EPiDN9T36J8kjdFyvPJTerMEZ49EmmIYBZYgg5PyHzQJ/dM9eTI0+T8kJbe99Jqit/BnIesstIWsvE8mvVPQ0/5+wyD7yJSLG4=
-    - secure: KqodmvTlz0wkPUw2gRMA1LeHT0qiyCVPivh7nZfDlnOVPBZJ+fVfVAcHuebHf55j2sUWQvkmLA9qEHr7xdULaaDMnX9+KC34lO09+mTw/VhNx1uHwOG/+CPSxFzxz8bVQAMapg9qFannI/afT7xakIEjTjoiRDFpjowM9sYmOwI=
+    - secure: "Z6GuoXH1jrVKhiooKj91sPxB4zWmlcv7/3VaTEqvwZYthZpvnbB5V9Y1i5vbLB+A1NfQePg044OeP1p11a5i8ZxmHRMI4G8yD1vir2BQfxzHE17iERDTO7BPr/kzeuEvGIHDN3BkZT3tJ/6Fz3moRQWGQV/yeFjzAVZeRU6Rtbk="
+    - secure: "CGYiSwS+g+AxIvqjmdRDSzmzCQnqzEFug4Stn18OIHzc2NXHhgWTP77EQ5JHE1qB1M7YNiZqyUAQPWqM0F8HpTA1i/Ls5fSU7HZzxH69wq1RmYgEyUnX34xOyKJ+KzFYrZUW85MUrNk1/WIDDVaol2mUDyDJyAlSzJEK8Recnuw="
 
 script:
    - mvn -Phudson clean install site
