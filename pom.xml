@@ -37,10 +37,12 @@
 
 	<properties>
 		<!-- general -->
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<user.jdk-version>1.8</user.jdk-version>
 		<github.global.userName>${env.gituser}</github.global.userName>
 		<github.global.password>${env.gitpassword}</github.global.password>
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<github.site.repositoryName>RADeS</github.site.repositoryName>
+		<github.site.repositoryOwner>${env.gituser}</github.site.repositoryOwner>
 
 		<!-- Dokumentnamen -->
 		<masterdokument>Architekturdokumentation</masterdokument>
@@ -154,16 +156,6 @@
 					<groupId>com.github.github</groupId>
 					<artifactId>site-maven-plugin</artifactId>
 					<version>${github.maventools.version}</version>
-					<configuration>
-						<message>Building site for ${project.version}</message>
-						<dryRun>${testonly}</dryRun>
-						<noJekyll>true</noJekyll>
-						<merge>true</merge>
-						<repositoryName>${github.site.repositoryName}</repositoryName>
-						<repositoryOwner>${github.site.repositoryOwner}</repositoryOwner>
-						<userName>${github.global.userName}</userName>
-						<password>${github.global.password}</password>
-					</configuration>
 				</plugin>
 			</plugins>
 		</pluginManagement>
