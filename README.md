@@ -28,3 +28,9 @@ Powered by
 
 [![CloudBees](http://web-static-cloudfront.s3.amazonaws.com/images/badges/BuiltOnDEV.png)](http://cloudbees.com)
 
+==Current Status==
+Working on a serie of annotation processors to generating artifacts for:
+* Builder of domain objects
+* Getter of domain objects
+* Using a generic Comperator Framework
+
