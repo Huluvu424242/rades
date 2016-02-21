@@ -49,6 +49,7 @@
 		<workDirectory>${basedir}/target/work/docbkx</workDirectory>
 
 		<!-- Versionen der DocBook-Komponenten -->
+		<github.maventools.version>0.12</github.maventools.version>
 		<rades-docbook-style.version>1.0.0-SNAPSHOT</rades-docbook-style.version>
 		<docbkx-maven-plugin.version>2.0.13</docbkx-maven-plugin.version>
 		<docbook.version>5.0-all</docbook.version>
@@ -143,6 +144,16 @@
 						<source>1.8</source>
 						<target>1.8</target>
 					</configuration>
+				</plugin>
+				<!-- <plugin>
+					<groupId>com.github.github</groupId>
+					<artifactId>downloads-maven-plugin</artifactId>
+					<version>${github.maventools.version}</version>
+				</plugin> -->
+				<plugin>
+					<groupId>com.github.github</groupId>
+					<artifactId>site-maven-plugin</artifactId>
+					<version>${github.maventools.version}</version>
 				</plugin>
 			</plugins>
 		</pluginManagement>

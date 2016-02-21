@@ -29,6 +29,9 @@ Powered by
 [![CloudBees](http://web-static-cloudfront.s3.amazonaws.com/images/badges/BuiltOnDEV.png)](http://cloudbees.com)
 
 ==Current Status==
+
+Aktuelle Documentation liegt ab unter: http://funthomas424242.github.io/RADeS/index.html 
+
 Working on a serie of annotation processors to generating artifacts for:
 * Builder of domain objects
 * Getter of domain objects
