@@ -28,7 +28,8 @@ Powered by
 
 [![CloudBees](http://web-static-cloudfront.s3.amazonaws.com/images/badges/BuiltOnDEV.png)](http://cloudbees.com)
 
-==Current Status==
+Current Status
+==============
 [![Build Status](https://travis-ci.org/FunThomas424242/RADeS.svg?branch=master)](https://travis-ci.org/FunThomas424242/RADeS)
 
 Aktuelle Documentation liegt ab unter: http://funthomas424242.github.io/RADeS/index.html 
