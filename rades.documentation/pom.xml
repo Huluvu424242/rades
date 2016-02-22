@@ -31,55 +31,6 @@
 		 
 	</description>
 
-	<prerequisites>
-		<maven>3.0</maven>
-	</prerequisites>
-
-	<profiles>
-		<profile>
-			<id>local</id>
-			<activation>
-				<property>
-					<name>runninglocal</name>
-					<value>true</value>
-				</property>
-			</activation>
-			<properties>
-				<testonly>true</testonly>
-			</properties>
-		</profile>
-		<profile>
-			<!-- the profile is only active if no other profile is active. -->
-			<!-- locally allways a profile must be active. -->
-			<id>hudson</id>
-			<activation>
-				<activeByDefault>true</activeByDefault>
-			</activation>
-			<properties>
-				<testonly>false</testonly>
-			</properties>
-		</profile>
-	</profiles>
-
-	<properties>
-		<!-- Dokumentnamen -->
-		<masterdokument>Architekturdokumentation</masterdokument>
-
-		<!-- Arbeitsverzeichnis des Docbkx-Plugins definieren -->
-		<workDirectory>${basedir}/target/work/docbkx</workDirectory>
-
-		<!-- Versionen der DocBook-Komponenten -->
-		<rades-docbook-style.version>1.0.0-SNAPSHOT</rades-docbook-style.version>
-		<docbkx-maven-plugin.version>2.0.14</docbkx-maven-plugin.version>
-		<docbook.version>5.0-all</docbook.version>
-		<fop-hyph.version>1.2</fop-hyph.version>
-
-		<maven-assembly-plugin.version>2.2.1</maven-assembly-plugin.version>
-	</properties>
-
-
-
-
 	<licenses>
 		<license>
 			<name>GNU LESSER GENERAL PUBLIC LICENSE v2.1</name>
@@ -98,8 +49,8 @@
 	<dependencies>
 		<dependency>
 			<groupId>com.github.funthomas424242</groupId>
-			<artifactId>rades-docbook-style</artifactId>
-			<version>1.0.0-SNAPSHOT</version>
+			<artifactId>docbook.style</artifactId>
+			<version>${project.version}</version>
 			<type>zip</type>
 			<scope>runtime</scope>
 		</dependency>
@@ -112,7 +63,6 @@
 			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
 				<artifactId>build-helper-maven-plugin</artifactId>
-				<version>1.7</version>
 				<executions>
 					<execution>
 						<id>attach-artifacts</id>
@@ -134,14 +84,13 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-site-plugin</artifactId>
-				<version>${mvn.siteplugin.version}</version>
 				<configuration>
 					<locales>
 						de
 					</locales>
 				</configuration>
 			</plugin>
-			<plugin>
+			<!-- <plugin>
 				<groupId>com.github.github</groupId>
 				<artifactId>site-maven-plugin</artifactId>
 				<dependencies>
@@ -169,7 +118,7 @@
 						<phase>site</phase>
 					</execution>
 				</executions>
-			</plugin>
+			</plugin> -->
 
 			<!-- docbook build -->
 			<plugin>
@@ -188,8 +137,8 @@
 							<artifactItems>
 								<artifactItem>
 									<groupId>com.github.funthomas424242</groupId>
-									<artifactId>rades-docbook-style</artifactId>
-									<version>${rades-docbook-style.version}</version>
+									<artifactId>docbook.style</artifactId>
+									<version>${project.version}</version>
 									<type>zip</type>
 								</artifactItem>
 							</artifactItems>
@@ -249,7 +198,8 @@
 								</copy>
 
 								<!-- Kopiert Bilder fuer die HTML-Version -->
-								<copy todir="${project.build.directory}/site/${project.artifactId}/html/images">
+								<copy
+									todir="${project.build.directory}/site/${project.artifactId}/html/images">
 									<fileset dir="${workDirectory}/images">
 										<exclude name="**/*.pdf" />
 									</fileset>
@@ -263,7 +213,8 @@
 									</fileset>
 								</copy>
 								<!-- Kopiert CSS-Styles fuer die HTML-Version -->
-								<copy todir="${project.build.directory}/site/${project.artifactId}/html/styles">
+								<copy
+									todir="${project.build.directory}/site/${project.artifactId}/html/styles">
 									<fileset dir="${workDirectory}/styles">
 										<include name="*.css" />
 									</fileset>
@@ -358,7 +309,7 @@
 			<plugin>
 				<!-- Ausgabedateien in einem Zip-Archiv zusammenfassen -->
 				<artifactId>maven-assembly-plugin</artifactId>
-				<version>${maven-assembly-plugin.version}</version>
+				<!-- <version>${maven-assembly-plugin.version}</version> -->
 				<executions>
 					<execution>
 						<id>zip documentation</id>
