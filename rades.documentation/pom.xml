@@ -199,7 +199,7 @@
 
 								<!-- Kopiert Bilder fuer die HTML-Version -->
 								<copy
-									todir="${project.build.directory}/site/${project.artifactId}/html/images">
+									todir="${project.build.directory}/site/${project.artifactId}/images">
 									<fileset dir="${workDirectory}/images">
 										<exclude name="**/*.pdf" />
 									</fileset>
@@ -207,14 +207,14 @@
 								<!-- Kopiert Bilder fuer die Webhelp-Version. Muss angepasst werden, 
 									wenn sich der Name des DocBook-Dokuments ändert. -->
 								<copy
-									todir="${project.build.directory}/site/${project.artifactId}/webhelp/architecturedoc/content/images">
+									todir="${project.build.directory}/site/${project.artifactId}/docbook/${masterdokument}/images">
 									<fileset dir="${workDirectory}/images">
 										<exclude name="**/*.pdf" />
 									</fileset>
 								</copy>
 								<!-- Kopiert CSS-Styles fuer die HTML-Version -->
 								<copy
-									todir="${project.build.directory}/site/${project.artifactId}/html/styles">
+									todir="${project.build.directory}/site/${project.artifactId}/docbook/styles">
 									<fileset dir="${workDirectory}/styles">
 										<include name="*.css" />
 									</fileset>
@@ -227,7 +227,7 @@
 				<configuration>
 					<!-- Arbeitsverzeichnis festlegen -->
 					<sourceDirectory>${workDirectory}</sourceDirectory>
-					<targetDirectory>${project.build.directory}/site/${project.artifactId}</targetDirectory>
+					<targetDirectory>${project.build.directory}/site/${project.artifactId}/docbook</targetDirectory>
 
 					<!-- Zusaetzliche XSLT Parameter -->
 					<customizationParameters>
