@@ -73,7 +73,7 @@
 						<configuration>
 							<artifacts>
 								<artifact>
-									<file>${project.build.directory}/site/${project.artifactId}/${masterdokument}.pdf</file>
+									<file>${project.build.directory}/site/${project.artifactId}/docbook/${masterdokument}.pdf</file>
 									<type>pdf</type>
 								</artifact>
 							</artifacts>
