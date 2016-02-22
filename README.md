@@ -9,8 +9,7 @@ RADeS is build on EMEL architecture, which based on the following DSLs:
  - MSM DSL to describe the Multi Service Model of the Middle Layer.
  - ERM DSL to describe the Entity Relation Model of the Entity Layer.
  
-**Build on Jenkins**: [![Build Status](https://funthomas424242.ci.cloudbees.com/buildStatus/icon?job=RADeS)](https://funthomas424242.ci.cloudbees.com/job/RADeS/)
- 
+
 **Project Site:** http://funthomas424242.github.com/RADeS/
 
 
@@ -21,18 +20,11 @@ Maven Repositories
 
 **Release**: https://repository-funthomas424242.forge.cloudbees.com/release/
 
-Powered by
-----------
-
-[![Maven](http://maven.apache.org/images/logos/maven-feather.png)](http://maven.apache.org)
-
-[![CloudBees](http://web-static-cloudfront.s3.amazonaws.com/images/badges/BuiltOnDEV.png)](http://cloudbees.com)
-
 Current Status
 ==============
 [![Build Status](https://travis-ci.org/FunThomas424242/RADeS.svg?branch=master)](https://travis-ci.org/FunThomas424242/RADeS)
 
-Aktuelle Documentation liegt ab unter: http://funthomas424242.github.io/RADeS/index.html 
+Aktuelle Documentation liegt ab unter: http://funthomas424242.github.io/RADeS/rades.documentation/docbook/Architekturdokumentation/content/index.html
 
 Working on a serie of annotation processors to generating artifacts for:
 * Builder of domain objects
