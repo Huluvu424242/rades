@@ -10,10 +10,13 @@ RADeS is build on EMEL architecture, which based on the following DSLs:
  - ERM DSL to describe the Entity Relation Model of the Entity Layer.
  
 
-**Project Site:** http://funthomas424242.github.com/RADeS/
+**Project Site:** 
 
+http://funthomas424242.github.com/RADeS/
 
-**Architektur Doku:** http://funthomas424242.github.io/RADeS/rades.documentation/docbook/Architekturdokumentation/content/index.html
+**Architektur Doku:** 
+
+http://funthomas424242.github.io/RADeS/rades.documentation/docbook/Architekturdokumentation/content/index.html
 
 Current Status
 ==============
