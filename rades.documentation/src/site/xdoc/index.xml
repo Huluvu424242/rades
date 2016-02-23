@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document xmlns="http://maven.apache.org/XDOC/2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/XDOC/2.0 http://maven.apache.org/xsd/xdoc-2.0.xsd">
+
+
+
+	<body>
+
+		<section name="Willkommen bei RADeS - Dokumentation">
+
+			<p>
+				RADeS steht für Rapid Application Development System - also
+				schnelles Anwendungsentwicklungs System.
+			</p>
+			<p>
+				Basierend auf DSLs (Domän spezifischen Sprachen) soll durch RADeS
+				Programmkode generiert werden (In Form eines Mixes aus Domain Driven
+				Development
+				und Model Driven Development).
+			</p>
+			<p>
+				RADeS basiert auf der EMEL Architektur, welche auf den
+				folgenden
+				DSLs
+				aufbaut:
+			</p>
+			<ol>
+				<li> EVM DSL zur Beschreibung der Dialogschicht (Eye Layer).</li>
+				<li> MSM DSL zur Beschreibung der Multi Service Schicht (Middle
+					Layer).
+				</li>
+				<li> ERM DSL zur Beschreibung der Persistence Schicht (Entity
+					Layer).
+				</li>
+			</ol>
+			<p>
+				<a
+					href="http://funthomas424242.github.io/RADeS/rades.documentation/docbook/Architekturdokumentation/content/index.html"
+					target="_blank">Zur Architekturdokumentation</a>
+			</p>
+		</section>
+
+	</body>
+
+</document>

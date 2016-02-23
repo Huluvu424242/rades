@@ -11,20 +11,11 @@ RADeS is build on EMEL architecture, which based on the following DSLs:
  
 
 **Project Site:** http://funthomas424242.github.com/RADeS/
-
-
-Maven Repositories
-------------------
-
-**Snapshot**: https://repository-funthomas424242.forge.cloudbees.com/snapshot/
-
-**Release**: https://repository-funthomas424242.forge.cloudbees.com/release/
+**Architektur Doku:** http://funthomas424242.github.io/RADeS/rades.documentation/docbook/Architekturdokumentation/content/index.html
 
 Current Status
 ==============
-[![Build Status](https://travis-ci.org/FunThomas424242/RADeS.svg?branch=master)](https://travis-ci.org/FunThomas424242/RADeS)
-
-Aktuelle Documentation liegt ab unter: http://funthomas424242.github.io/RADeS/rades.documentation/docbook/Architekturdokumentation/content/index.html
+[![Build Status](https://travis-ci.org/FunThomas424242/RADeS.svg?branch=master)](https://travis-ci.org/FunThomas424242/RADeS) 
 
 Working on a serie of annotation processors to generating artifacts for:
 * Builder of domain objects

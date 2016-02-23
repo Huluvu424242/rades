@@ -14,23 +14,7 @@
 	<name>RADeS - Dokumentation</name>
 	<url>https://funthomas424242.github.com/RADeS</url>
 
-	<description>
-		RADeS steht für Rapid Application Development System - also 
-		schnelles Anwendungsentwicklungs System.
 	
-		Basierend auf DSLs (Domän spezifischen Sprachen) soll durch RADeS 
-		Programmkode generiert werden (In Form eines Mixes aus Domain Driven Development 
-		und Model Driven Development).
-		
-		RADeS basiert auf der EMEL Architektur, welche auf den 
-		folgenden DSLs aufbaut:
-		 
-		 1. EVM DSL zur Beschreibung der Dialogschicht (Eye Layer).
-		 2. MSM DSL zur Beschreibung der Multi Service Schicht (Middle Layer).
-		 3. ERM DSL zur Beschreibung der Persistence Schicht (Entity Layer).
-		 
-	</description>
-
 	<licenses>
 		<license>
 			<name>GNU LESSER GENERAL PUBLIC LICENSE v2.1</name>

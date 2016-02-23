@@ -135,7 +135,7 @@
 		<url>https://github.com/funthomas424242/RADeS/issues</url>
 	</issueManagement>
 
-	<distributionManagement>
+	<!-- <distributionManagement>
 		<downloadUrl>https://github.com/FunThomas424242/RADeS/downloads</downloadUrl>
 		<snapshotRepository>
 			<id>cloudbees-snapshots</id>
@@ -150,7 +150,7 @@
 			<url>https://repository-funthomas424242.forge.cloudbees.com/release/</url>
 		</repository>
 	</distributionManagement>
-
+ -->
 
 	<scm>
 		<url>https://github.com/FunThomas424242/RADeS</url>
