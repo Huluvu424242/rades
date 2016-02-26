@@ -1,4 +1,4 @@
-package de.rades.comparators.core;
+package de.rades.corelibs.domain;
 
 import java.util.Date;
 

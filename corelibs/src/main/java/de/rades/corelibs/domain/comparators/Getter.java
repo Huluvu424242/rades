@@ -1,4 +1,4 @@
-package de.rades.comparators.core;
+package de.rades.corelibs.domain.comparators;
 
 /**
  * Interface f�r Property-Getter ohne Reflection.

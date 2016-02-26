@@ -8,19 +8,16 @@
 		<artifactId>rades</artifactId>
 		<version>1.0-SNAPSHOT</version>
 	</parent>
-	<artifactId>annotation.processors</artifactId>
+	<artifactId>corelibs</artifactId>
 	<packaging>jar</packaging>
 
-	<name>RADeS - Annotation Processors</name>
+	<name>RADeS - Core Libs</name>
 
 
 	<description>
-		Annotation Processors zum Generieren von Artifakten zum:
-		* Bereistellen von Buildern für Domain Objekte
-		* Bereistellen von Gettern für Domain Objekte
-		* Generische Comparators zur typsicheren Sortierung
+	   Libraries die von den anderen Subprojekten bei der Generierung oder 
+	   zur Laufzeit des modellierten Produktes benutzt werden.
 	</description>
-
 
 	<licenses>
 		<license>
@@ -30,8 +27,6 @@
 		</license>
 	</licenses>
 
-
-
 	<dependencies>
 		<dependency>
 			<groupId>junit</groupId>
@@ -40,6 +35,5 @@
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
-	
 
 </project>

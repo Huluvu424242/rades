@@ -1,4 +1,4 @@
-package de.rades.comparators.core;
+package de.rades.corelibs.domain.comparators;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -10,6 +10,13 @@ import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
+
+import de.rades.corelibs.domain.Customer;
+import de.rades.corelibs.domain.CustomerBuilder;
+import de.rades.corelibs.domain.CustomerReadAccessor;
+import de.rades.corelibs.domain.comparators.MultiComparator;
+import de.rades.corelibs.domain.comparators.NullIsLesserPropertyComparator;
+import de.rades.corelibs.domain.comparators.PropertyComparator;
 
 /**
  * JUnit4-Testcase f�r den verbesserten {@link Comparator}

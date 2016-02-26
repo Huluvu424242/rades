@@ -1,4 +1,4 @@
-package de.rades.comparators.core;
+package de.rades.corelibs.domain.comparators;
 
 import java.util.Comparator;
 

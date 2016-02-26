@@ -1,4 +1,4 @@
-package de.rades.comparators.core;
+package de.rades.corelibs.domain.comparators;
 
 /**
  * Spezialisiertes Interface {@link Getter} mit Festlegung des Property-Typs auf
