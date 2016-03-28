@@ -26,4 +26,6 @@ Working on a serie of annotation processors to generating artifacts for:
 * Builder of domain objects
 * Getter of domain objects
 * Using a generic Comperator Framework
+* Builder of JSON Schema from ResponseType application/hal-json
+* Builder of JSON Schema Validation Tests for RestIntegrationTests (e.g. spring-boot)
 
