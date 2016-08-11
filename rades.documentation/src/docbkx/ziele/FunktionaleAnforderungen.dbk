@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <section version="5.0" xmlns="http://docbook.org/ns/docbook"
          xmlns:xlink="http://www.w3.org/1999/xlink"
          xmlns:xi="http://www.w3.org/2001/XInclude"
@@ -27,7 +27,10 @@
     <title>Funktionale Anforderungen</title>
 
     <para>
-    
+    RADeS soll ein Entwicklungssystem für Anwendungssoftware sein. Die Anwendungen sollen in den Bereichen Mobile, Web und Desktop 
+    sowohl gleiches Aussehen wie auch Verhalten zeigen. Dabei müssen jedoch auch die Unterschiedlichen Nutzungsformen berücksichtigt werden. 
+    So erfordert die Bedienung der erstellten Anwendung auf einem mobilen Gerät andere Navigations- und Eingabemöglichkeiten als auf einem
+    Desktop- oder Websystem. 
     </para>
   </section>
 

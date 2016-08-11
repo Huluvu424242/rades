@@ -177,8 +177,9 @@
 
 
 	<modules>
-		<module>docbook.style</module>
+        <module>corelibs</module>
 		<module>annotation.processors</module>
+		<module>docbook.style</module>
 		<module>rades.documentation</module>
 	</modules>
 
