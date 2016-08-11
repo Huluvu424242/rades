@@ -6,7 +6,7 @@
 
 	<groupId>com.github.funthomas424242</groupId>
 	<artifactId>rades</artifactId>
-	<version>1.0-SNAPSHOT</version>
+	<version>1.0.0-SNAPSHOT</version>
 	<packaging>pom</packaging>
 
 	<name>RADeS - Rapid Application Development System</name>
@@ -177,8 +177,9 @@
 
 
 	<modules>
-		<module>docbook.style</module>
+        <module>corelibs</module>
 		<module>annotation.processors</module>
+		<module>docbook.style</module>
 		<module>rades.documentation</module>
 	</modules>
 

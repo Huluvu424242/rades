@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <book version="5.0" xmlns="http://docbook.org/ns/docbook"
 	xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xi="http://www.w3.org/2001/XInclude"
 	xmlns:svg="http://www.w3.org/2000/svg" xmlns:m="http://www.w3.org/1998/Math/MathML"
@@ -10,7 +10,7 @@
 
 		<releaseinfo>Release Version</releaseinfo>
 
-		<author>
+		<author> 
 			<orgname>Free Software Foundation Europe</orgname>
 		</author>
 
@@ -190,7 +190,31 @@
 	<chapter>
 		<title>Lösungsstrategie</title>
 
-		<para />
+		<para>
+		Nachdem in der Vergangheit deutliche Nachteile in der Modellgetriebenen Softwareentwicklung zu Tage traten, soll hier ein anderer Lösungsansatz gewählt werden. 
+		Die Nachteile langer Entwicklungspausen während der Buildschritte: Generierung und Serverstart sollen wie folgt gemildert werden:
+		<variablelist>
+			<varlistentry>
+				<term>Generierung</term>
+
+				<listitem>
+					<para>Hier sollen Annotationsprozessoren zum Einsatz kommen.
+					</para>
+				</listitem>
+			</varlistentry>
+			<varlistentry>
+				<term>Serverstart</term>
+
+				<listitem>
+					<para>Es soll auf OSGi Technologie und Microservices gesetzt werden um nur veränderte Kodeteile neu deployen zu müssen. 
+					</para>
+				</listitem>
+			</varlistentry>
+		</variablelist>
+		Da die erstellten Anwendungen vorzugsweise als Sammlung diverser Microservices verstanden werden sollen, wird primär eine Entwicklung in den Sprachen
+		HTML, JavaScript und Java angedacht. Dabei sollen die Nachteile der nichttypisierten Sprache JavaScript durch Einsatz von Typscript oder Dukescript gemildert werden.
+		Weiterhin werden Technologien wie AngularJS und REST Services über JSON Datenaustausch bevorzugt. 
+		</para>
 	</chapter>
 
 	<chapter>
