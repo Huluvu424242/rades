@@ -17,7 +17,7 @@ Current Status
 [![Build Status](https://travis-ci.org/FunThomas424242/RADeS.svg?branch=master)](https://travis-ci.org/FunThomas424242/RADeS) 
 
 Die einzelnen Aufgaben werden in Unterprojekten realisiert:
-* [Annotation zur Kodegenerierung](https://github.com/FunThomas424242/rades-annotations)
+* [Annotationen zur Kodegenerierung](https://github.com/FunThomas424242/rades-annotations)
 * Using a generic Comperator Framework
 * Builder of JSON Schema from ResponseType application/hal-json
 * Builder of JSON Schema Validation Tests for RestIntegrationTests (e.g. spring-boot)
