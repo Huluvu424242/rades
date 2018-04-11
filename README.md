@@ -1,14 +1,8 @@
-RADeS
+RADES
 =====
-**RADeS** stands for Rapid Application Development System
+**RADES** steht für Rapid Application Development System
 
-Based on DSLs should be generated code by RADeS (Mixed of Domain Driven Development and Model Driven Development).
-RADeS is build on EMEL architecture, which based on the following DSLs:
- 
- - EVM DSL to describe the Eye View Model of the Eye Layer. 
- - MSM DSL to describe the Multi Service Model of the Middle Layer.
- - ERM DSL to describe the Entity Relation Model of the Entity Layer.
- 
+Ziel des Projektes ist es Mittel zur Automatisierung der Softwareentwicklung bereitzustellen.
 
 **Project Site:** 
 
@@ -22,9 +16,8 @@ Current Status
 ==============
 [![Build Status](https://travis-ci.org/FunThomas424242/RADeS.svg?branch=master)](https://travis-ci.org/FunThomas424242/RADeS) 
 
-Working on a serie of annotation processors to generating artifacts for:
-* Builder of domain objects
-* Getter of domain objects
+Die einzelnen Aufgaben werden in Unterprojekten realisiert:
+* [Annotation zur Kodegenerierung](https://github.com/FunThomas424242/rades-annotations)
 * Using a generic Comperator Framework
 * Builder of JSON Schema from ResponseType application/hal-json
 * Builder of JSON Schema Validation Tests for RestIntegrationTests (e.g. spring-boot)
