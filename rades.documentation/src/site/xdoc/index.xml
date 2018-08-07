@@ -9,7 +9,7 @@
 		<section name="Willkommen bei RADeS - Dokumentation">
 
 			<p>
-				RADeS steht für Rapid Application Development System - also
+				RADES steht für Rapid Application Development System - also
 				schnelles Anwendungsentwicklungs System.
 			</p>
 			<p>
@@ -19,7 +19,7 @@
 				und Model Driven Development).
 			</p>
 			<p>
-				RADeS basiert auf der EMEL Architektur, welche auf den
+				RADES basiert auf der EMEL Architektur, welche auf den
 				folgenden
 				DSLs
 				aufbaut:
@@ -35,7 +35,7 @@
 			</ol>
 			<p>
 				<a
-					href="http://funthomas424242.github.io/RADeS/rades.documentation/docbook/Architekturdokumentation/content/index.html"
+					href="http://funthomas424242.github.io/RADES/rades.documentation/docbook/Architekturdokumentation/content/index.html"
 					target="_blank">Zur Architekturdokumentation</a>
 			</p>
 		</section>

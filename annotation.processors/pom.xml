@@ -11,7 +11,7 @@
 	<artifactId>annotation.processors</artifactId>
 	<packaging>jar</packaging>
 
-	<name>RADeS - Annotation Processors</name>
+	<name>RADES - Annotation Processors</name>
 
 
 	<description>

@@ -1,7 +1,7 @@
 rades-docbook-style
 ===================
 
-Docbook style project for [RADeS](https://github.com/FunThomas424242/RADeS) documenation.
+Docbook style project for [RADES](https://github.com/FunThomas424242/RADES) documenation.
 
 [![Build Status](https://travis-ci.org/FunThomas424242/rades-docbook-style.svg?branch=master)](https://travis-ci.org/FunThomas424242/rades-docbook-style)
 

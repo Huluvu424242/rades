@@ -11,8 +11,8 @@
 	<artifactId>rades.documentation</artifactId>
 	<packaging>pom</packaging>
 
-	<name>RADeS - Dokumentation</name>
-	<url>https://funthomas424242.github.com/RADeS</url>
+	<name>RADES - Dokumentation</name>
+	<url>https://funthomas424242.github.com/RADES</url>
 
 	
 	<licenses>
@@ -24,9 +24,9 @@
 	</licenses>
 
 	<scm>
-		<url>https://github.com/FunThomas424242/RADeS</url>
-		<connection>scm:git:git://github.com/funthomas424242/RADeS.git</connection>
-		<developerConnection>scm:git:git@github.com:funthomas424242/RADeS.git</developerConnection>
+		<url>https://github.com/FunThomas424242/RADES</url>
+		<connection>scm:git:git://github.com/funthomas424242/RADES.git</connection>
+		<developerConnection>scm:git:git@github.com:funthomas424242/RADES.git</developerConnection>
 	</scm>
 
 

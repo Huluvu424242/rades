@@ -4,7 +4,7 @@
 	xmlns:svg="http://www.w3.org/2000/svg" xmlns:m="http://www.w3.org/1998/Math/MathML"
 	xmlns:html="http://www.w3.org/1999/xhtml" xmlns:db="http://docbook.org/ns/docbook">
 	<info>
-		<title>RADeS Projekt</title>
+		<title>RADES Projekt</title>
 
 		<subtitle>Architekturdokumentation</subtitle>
 
@@ -85,7 +85,7 @@
 			<section>
 				<title>Organisation und Struktur</title>
 
-				<para>RADeS soll als Open Source Projekt im Internet entwickelt
+				<para>RADES soll als Open Source Projekt im Internet entwickelt
 					werden. Die Infrastruktur soll generell eine weltweite, verteilte
 					Entwicklung ermöglichen. Initial wird das Projekt mit Fokus auf den
 					deutschen Sprachraum gestartet. Daher erfolgt die Kommunikation und
@@ -129,7 +129,7 @@
 					<term>Generierung vs. Kodierung</term>
 
 					<listitem>
-						<para>Es wird davon ausgegangen, dass durch RADeS nur ein Teil des
+						<para>Es wird davon ausgegangen, dass durch RADES nur ein Teil des
 							Quellkodes vom Zielprogramm generiert werden kann. Der
 							verbleibende Teil muss auf klassischer Weise durch den Entwickler
 							händisch kodiert werden. Da ein Reafactoring im Modell über die
@@ -154,8 +154,8 @@
 					<term>Modellierung Fachlich vs. Technisch</term>
 
 					<listitem>
-						<para>Die in RADeS zur Spezifikation Verwendung findenden Modelle
-							sind eher technischer Natur. RADeS erhebt nicht den Anspruch rein
+						<para>Die in RADES zur Spezifikation Verwendung findenden Modelle
+							sind eher technischer Natur. RADES erhebt nicht den Anspruch rein
 							fachliche Modellierung zu ermöglichen. Es wird angenommen, dass
 							eine rein fachliche Modellierung generell nicht möglich ist. Wohl
 							aber soll eine fachliche Domän mit technischen Ausdrucksmitteln

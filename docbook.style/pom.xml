@@ -12,7 +12,7 @@
 	<artifactId>docbook.style</artifactId>
 	<packaging>pom</packaging>
 
-	<name>RADeS - Docbook Style</name>
+	<name>RADES - Docbook Style</name>
 	<url>https://github.com/FunThomas424242/rades-docbook-style</url>
 	<description>
 		Logos, Fonts, Stylangaben basierend auf den frei zugänglichen
