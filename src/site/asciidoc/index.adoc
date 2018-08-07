@@ -1,0 +1,12 @@
+= RADES: Rapid Application Development System
+:doctype: book
+:author: Thomas Schubert
+:email: funthomas424242@gmail.com
+:icons: font
+:lang: de
+:encoding: utf-8
+:toc: left
+:numbered:
+
+
+

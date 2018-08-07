@@ -1,0 +1,37 @@
+<project xmlns="http://maven.apache.org/DECORATION/1.8.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/DECORATION/1.8.0 http://maven.apache.org/xsd/decoration-1.8.0.xsd"
+>
+
+  <skin>
+    <groupId>org.apache.maven.skins</groupId>
+    <artifactId>maven-fluido-skin</artifactId>
+    <version>1.7</version>
+  </skin>
+
+  <custom>
+    <fluidoSkin>
+      <topBarEnabled>true</topBarEnabled>
+      <topBarContainerStyle>width: 80%;</topBarContainerStyle>
+      <sideBarEnabled>false</sideBarEnabled>
+      <gitHub>
+        <projectId>PIUGroup/rades</projectId>
+        <ribbonOrientation>left</ribbonOrientation>
+        <ribbonColor>gray</ribbonColor>
+      </gitHub>
+      <ohloh>
+        <projectId>rades</projectId>
+        <widget>factoids</widget>
+      </ohloh>
+      <googlePlusOne/>
+      <facebookLike/>
+      <googleSearch />
+      <sourceLineNumbersEnabled>true</sourceLineNumbersEnabled>
+    </fluidoSkin>
+  </custom>
+
+  <body>
+    <menu name="RADES Universum">
+      <item name="RADES" href="https://PIUGroup.github.io/rades/"/>
+    </menu>
+  </body>
+</project>
