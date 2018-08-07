@@ -2,36 +2,45 @@
          xsi:schemaLocation="http://maven.apache.org/DECORATION/1.8.0 http://maven.apache.org/xsd/decoration-1.8.0.xsd"
 >
 
-  <skin>
-    <groupId>org.apache.maven.skins</groupId>
-    <artifactId>maven-fluido-skin</artifactId>
-    <version>1.7</version>
-  </skin>
+    <skin>
+        <groupId>org.apache.maven.skins</groupId>
+        <artifactId>maven-fluido-skin</artifactId>
+        <version>1.7</version>
+    </skin>
 
-  <custom>
-    <fluidoSkin>
-      <topBarEnabled>true</topBarEnabled>
-      <topBarContainerStyle>width: 80%;</topBarContainerStyle>
-      <sideBarEnabled>false</sideBarEnabled>
-      <gitHub>
-        <projectId>PIUGroup/rades</projectId>
-        <ribbonOrientation>left</ribbonOrientation>
-        <ribbonColor>gray</ribbonColor>
-      </gitHub>
-      <ohloh>
-        <projectId>rades</projectId>
-        <widget>factoids</widget>
-      </ohloh>
-      <googlePlusOne/>
-      <facebookLike/>
-      <googleSearch />
-      <sourceLineNumbersEnabled>true</sourceLineNumbersEnabled>
-    </fluidoSkin>
-  </custom>
+    <custom>
+        <fluidoSkin>
+            <topBarEnabled>true</topBarEnabled>
+            <topBarContainerStyle>width: 80%;</topBarContainerStyle>
+            <sideBarEnabled>false</sideBarEnabled>
+            <gitHub>
+                <projectId>PIUGroup/rades</projectId>
+                <ribbonOrientation>left</ribbonOrientation>
+                <ribbonColor>gray</ribbonColor>
+            </gitHub>
+            <ohloh>
+                <projectId>rades</projectId>
+                <widget>factoids</widget>
+            </ohloh>
+            <googlePlusOne/>
+            <facebookLike/>
+            <googleSearch/>
+            <sourceLineNumbersEnabled>true</sourceLineNumbersEnabled>
+        </fluidoSkin>
+    </custom>
 
-  <body>
-    <menu name="RADES Universum">
-      <item name="RADES" href="https://PIUGroup.github.io/rades/"/>
-    </menu>
-  </body>
+    <body>
+        <menu name="RADES Universum">
+            <item name="Aktive Projekte">
+                <item name="RADES" href="https://PIUGroup.github.io/rades/"/>
+                <item name="~ Fluent Builder" href="index.html"/>
+                <item name="~ Annotations" href="https://funthomas424242.github.io/rades-annotations/index.html"/>
+                <item name="~ Tag Generator" href="https://funthomas424242.github.io/rades.tag-generator/index.html"/>
+                <item name="~ Example" href="https://github.com/FunThomas424242/rades.example"/>
+            </item>
+            <item name="Ruhende Projekte">
+                <item name="~ JBoss Forge Addon" href="https://github.com/FunThomas424242/rades.forge-addon"/>
+            </item>
+        </menu>
+    </body>
 </project>
