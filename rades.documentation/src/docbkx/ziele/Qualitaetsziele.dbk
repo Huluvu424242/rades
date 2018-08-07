@@ -11,7 +11,7 @@
 			<section>
 				<title>Bedienbarkeit</title>
 
-				<para>Von RADeS als eine Desktopanwendung welche für Entwickler als
+				<para>Von RADES als eine Desktopanwendung welche für Entwickler als
 					Endnutzer gedacht ist wird eine sehr gute Bedienbarkeit erwartet.
 					Die
 					Anwendung muss sich intuitiv bedienen lassen und soll leicht zu
@@ -24,15 +24,15 @@
 			<section>
 				<title>Änderbarkeit</title>
 
-				<para>RADeS ist als Entwicklerwerkzeug in einem schnellebigen Markt
+				<para>RADES ist als Entwicklerwerkzeug in einem schnellebigen Markt
 					platziert. Es ist davon auszugehen, dass das Produkt ständigen
 					Anpassungen an sich änderende Technologien und Organisationsformen
-					unterworfen ist. Daher muss RADeS sehr leicht und ohne Erzeugung
+					unterworfen ist. Daher muss RADES sehr leicht und ohne Erzeugung
 					größerer Aufwände anpassbar sein.
 				</para>
 
 				<para>Wesentlich wichtiger noch ist jedoch die Änderbarkeit der von
-					RADeS erstellten Programme. Diese sollten generell modular und
+					RADES erstellten Programme. Diese sollten generell modular und
 					technologieneutral aufgebaut sein. So sollte der Austausch der
 					Persistenztechnologie per Option wählbar sein.
 				</para>
@@ -41,7 +41,7 @@
 			<section>
 				<title>Sicherheit</title>
 
-				<para>Bei der Benutzung von RADeS ist von einem Einsatz in
+				<para>Bei der Benutzung von RADES ist von einem Einsatz in
 					Mehrbenutzerumgebungen auszugehen. Daher sind Zugangsdaten oder
 					weitere Credentials vor dem Zugriff anderer Nutzer zu schützen.
 				</para>
@@ -55,7 +55,7 @@
 			<section>
 				<title>Testbarkeit</title>
 
-				<para>RADeS soll generell automatisch testbar sein und auch durch
+				<para>RADES soll generell automatisch testbar sein und auch durch
 					eine
 					automatische Testsuite für Regressionstests abgesichert werden.
 				</para>
@@ -64,7 +64,7 @@
 			<section>
 				<title>Verfügbarkeit</title>
 
-				<para>RADeS selbst ist ein Entwicklerwerkzeug und muss als solches
+				<para>RADES selbst ist ein Entwicklerwerkzeug und muss als solches
 					keinen Hochverfügbarkeitsansprüchen genügen. Wenn das Werkzeug
 					ausfällt, kann es problemlos neu gestartet werden. Ein Ausfall
 					führt
@@ -73,7 +73,7 @@
 					beispielsweise beim Ausfall eines Onlinemarktes.
 				</para>
 
-				<para>Programme welche mit RADeS erstellt werden, sollten jedoch
+				<para>Programme welche mit RADES erstellt werden, sollten jedoch
 					auch
 					Hochverfügbarkeitsansprüchen genügen da mehrschichtige Anwendungen vor
 					allem im Enterprise Umfeld eingesetzt werden.
@@ -83,7 +83,7 @@
 			<section>
 				<title>Performanz</title>
 
-				<para>RADeS ist als Desktopanwendung zu sehen und muss nicht
+				<para>RADES ist als Desktopanwendung zu sehen und muss nicht
 					tausende
 					von Anfragen pro Zeiteinheit abarbeiten. Daher ist das Produkt auch
 					nicht im Highperformance Sektor einzuordnen. Eine niedrige

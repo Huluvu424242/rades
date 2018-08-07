@@ -12,7 +12,7 @@
     <title>Produktkarton</title>
 
     <para><figure>
-        <title>RADeS Produktkarton</title>
+        <title>RADES Produktkarton</title>
 
         <mediaobject>
           <imageobject>
@@ -27,7 +27,7 @@
     <title>Funktionale Anforderungen</title>
 
     <para>
-    RADeS soll ein Entwicklungssystem für Anwendungssoftware sein. Die Anwendungen sollen in den Bereichen Mobile, Web und Desktop 
+    RADES soll ein Entwicklungssystem für Anwendungssoftware sein. Die Anwendungen sollen in den Bereichen Mobile, Web und Desktop
     sowohl gleiches Aussehen wie auch Verhalten zeigen. Dabei müssen jedoch auch die Unterschiedlichen Nutzungsformen berücksichtigt werden. 
     So erfordert die Bedienung der erstellten Anwendung auf einem mobilen Gerät andere Navigations- und Eingabemöglichkeiten als auf einem
     Desktop- oder Websystem. 
@@ -37,7 +37,7 @@
   <section>
     <title>Einsatzgebiet</title>
 
-    <para>RADeS ist für den Einsatz in kleinen Teams gedacht. Als
+    <para>RADES ist für den Einsatz in kleinen Teams gedacht. Als
     Standardeinsatzfall wird von Feature Teams mit ca. 8 Entwicklern
     ausgegangen. Es wird vorrausgesetz, dass im Team eine Spezialisierung der
     Entwickler in folgende Gruppen vorhanden ist:</para>
@@ -78,7 +78,7 @@
       </varlistentry>
     </variablelist>
 
-    <para>RADeS soll bevorzugt agile Arbeitsweisen unterstützen. So soll
+    <para>RADES soll bevorzugt agile Arbeitsweisen unterstützen. So soll
     beispielsweise ein Arbeiten nach der Flow Design Methode direkt möglich
     sein und durch Sprachkonstrukte unterstützt werden.</para>
   </section>
