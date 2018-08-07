@@ -1,15 +1,8 @@
-#sudo: required
+language: java
 
-language:
-    - java
 
 jdk:
-    - oraclejdk8
+  - oraclejdk8
 
-env:
-  global:
-    - secure: "Z6GuoXH1jrVKhiooKj91sPxB4zWmlcv7/3VaTEqvwZYthZpvnbB5V9Y1i5vbLB+A1NfQePg044OeP1p11a5i8ZxmHRMI4G8yD1vir2BQfxzHE17iERDTO7BPr/kzeuEvGIHDN3BkZT3tJ/6Fz3moRQWGQV/yeFjzAVZeRU6Rtbk="
-    - secure: "CGYiSwS+g+AxIvqjmdRDSzmzCQnqzEFug4Stn18OIHzc2NXHhgWTP77EQ5JHE1qB1M7YNiZqyUAQPWqM0F8HpTA1i/Ls5fSU7HZzxH69wq1RmYgEyUnX34xOyKJ+KzFYrZUW85MUrNk1/WIDDVaol2mUDyDJyAlSzJEK8Recnuw="
+script: mvn
 
-script:
-   - mvn -Phudson clean install site

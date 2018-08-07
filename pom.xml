@@ -1,227 +1,259 @@
-<?xml version="1.0"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<?xml version="1.0" encoding="UTF-8"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+		 xmlns="http://maven.apache.org/POM/4.0.0"
+		 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<modelVersion>4.0.0</modelVersion>
-
 
 	<groupId>com.github.funthomas424242</groupId>
 	<artifactId>rades</artifactId>
 	<version>1.0.0-SNAPSHOT</version>
-	<packaging>pom</packaging>
 
-	<name>RADeS - Rapid Application Development System</name>
-	<url>https://funthomas424242.github.com/RADeS</url>
+	<packaging>jar</packaging>
 
-	<description>
-		RADeS steht für Rapid Application Development System - also 
-		schnelles Anwendungsentwicklungs System.
-	
-		Basierend auf DSLs (Domän spezifischen Sprachen) soll durch RADeS 
-		Programmkode generiert werden (In Form eines Mixes aus Domain Driven Development 
-		und Model Driven Development).
-		
-		RADeS basiert auf der EMEL Architektur, welche auf den 
-		folgenden DSLs aufbaut:
-		 
-		 1. EVM DSL zur Beschreibung der Dialogschicht (Eye Layer).
-		 2. MSM DSL zur Beschreibung der Multi Service Schicht (Middle Layer).
-		 3. ERM DSL zur Beschreibung der Persistence Schicht (Entity Layer).
-		 
-	</description>
+	<name>Projekt RADES</name>
+	<description>Rapid Application Development System</description>
+	<inceptionYear>2012</inceptionYear>
+	<url>https://funthomas424242.github.io/rades/</url>
 
-	<prerequisites>
-		<maven>3.2.5</maven>
-	</prerequisites>
 
-	<profiles>
-		<profile>
-			<id>local</id>
-			<activation>
-				<activeByDefault>true</activeByDefault>
-			</activation>
-		</profile>
-		<profile>
-			<id>hudson</id>
-			<build>
-				<pluginManagement>
-					<plugins>
-						<plugin>
-							<groupId>com.github.github</groupId>
-							<artifactId>site-maven-plugin</artifactId>
-							<version>${github.maventools.version}</version>
-							<dependencies>
-								<dependency>
-									<groupId>org.apache.maven.plugins</groupId>
-									<artifactId>maven-site-plugin</artifactId>
-									<version>${mvn.siteplugin.version}</version>
-								</dependency>
-							</dependencies>
-							<configuration>
-								<message>Building site for ${project.version}</message>
-								<dryRun>false</dryRun>
-								<noJekyll>true</noJekyll>
-								<merge>true</merge>
-								<repositoryName>${github.site.repositoryName}</repositoryName>
-								<repositoryOwner>${github.site.repositoryOwner}</repositoryOwner>
-								<userName>${github.global.userName}</userName>
-								<password>${github.global.password}</password>
-								<excludes>
-									<exclude>**/*.pdf</exclude>
-									<exclude>**/*.fo</exclude>
-								</excludes>
-							</configuration>
-							<executions>
-								<execution>
-									<goals>
-										<goal>site</goal>
-									</goals>
-									<phase>site</phase>
-								</execution>
-							</executions>
-						</plugin>
-					</plugins>
-				</pluginManagement>
-			</build>
-		</profile>
-	</profiles>
-
+	<licenses>
+		<license>
+			<url>https://www.gnu.org/licenses/fdl-1.3.de.html</url>
+			<name>GNU Free Documentation License
+				Version 1.3, 3 November 2008
+			</name>
+			<distribution>repo</distribution>
+		</license>
+	</licenses>
+	<scm>
+		<connection>scm:git:https://github.com/FunThomas424242/rades.git</connection>
+		<developerConnection>scm:git:git@github.com:FunThomas424242/rades.git</developerConnection>
+		<url>https://github.com/FunThomas424242/rades</url>
+	</scm>
+	<issueManagement>
+		<system>GitHub</system>
+		<url>https://github.com/FunThomas424242/rades/issues/new</url>
+	</issueManagement>
+	<ciManagement>
+		<system>Travis</system>
+		<url>https://travis-ci.org/FunThomas424242/rades</url>
+	</ciManagement>
+	<distributionManagement>
+		<snapshotRepository>
+			<id>bintray-funthomas424242-funthomas424242-libs</id>
+			<name>oss-jfrog-artifactory-snapshots</name>
+			<url>https://oss.jfrog.org/artifactory/oss-snapshot-local</url>
+		</snapshotRepository>
+		<repository>
+			<id>bintray-funthomas424242-funthomas424242-libs</id>
+			<name>funthomas424242-funthomas424242-libs</name>
+			<url>https://api.bintray.com/maven/funthomas424242/funthomas424242-libs/rades/;publish=1</url>
+		</repository>
+	</distributionManagement>
 
 	<properties>
-		<!-- general -->
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<user.jdk-version>1.8</user.jdk-version>
-		<!-- login -->
-		<github.global.userName>${env.gituser}</github.global.userName>
-		<github.global.password>${env.gitpassword}</github.global.password>
-		<github.site.repositoryOwner>${env.gituser}</github.site.repositoryOwner>
-		<github.site.repositoryName>RADeS</github.site.repositoryName>
-		<!-- plugins -->
-		<github.maventools.version>0.12</github.maventools.version>
-		<mvn.siteplugin.version>3.5</mvn.siteplugin.version>
-		<maven-assembly-plugin.version>2.2.1</maven-assembly-plugin.version>
-
-		<!-- Dokumentnamen -->
-		<masterdokument>Architekturdokumentation</masterdokument>
-
-		<!-- Arbeitsverzeichnis des Docbkx-Plugins definieren -->
-		<workDirectory>${basedir}/target/work/docbkx</workDirectory>
-
-		<!-- Versionen der DocBook-Komponenten -->
-		<docbkx-maven-plugin.version>2.0.13</docbkx-maven-plugin.version>
-		<docbook.version>5.0-all</docbook.version>
-		<fop-hyph.version>1.2</fop-hyph.version>
-
+		<maven.compiler.source>1.8</maven.compiler.source>
+		<maven.compiler.target>1.8</maven.compiler.target>
+		<maven-compiler-plugin.version>3.7.0</maven-compiler-plugin.version>
 	</properties>
 
 
-	<!-- <repositories> <repository> <id>cloudbees-snapshots</id> <url>http://repository-funthomas424242.forge.cloudbees.com/snapshot/</url> 
-		</repository> <repository> <id>cloudbees-releases</id> <url>http://repository-funthomas424242.forge.cloudbees.com/release/</url> 
-		</repository> </repositories> -->
+	<prerequisites>
+		<maven>3.3.9</maven>
+	</prerequisites>
 
-	<pluginRepositories>
-		<pluginRepository>
-			<id>mvnrepo</id>
-			<url>http://mvnrepository.com/artifact/</url>
-		</pluginRepository>
-	</pluginRepositories>
+	<dependencies />
 
-	<ciManagement>
-		<system>Jenkins</system>
-		<url>https://funthomas424242.ci.cloudbees.com/job/RADeS/</url>
-	</ciManagement>
+	<build>
+		<defaultGoal>site</defaultGoal>
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<groupId>org.asciidoctor</groupId>
+					<artifactId>asciidoctor-maven-plugin</artifactId>
+					<version>1.5.6</version>
+					<configuration>
+						<requires>
+							<require>asciidoctor-diagram</require>
+						</requires>
+						<backend>html5</backend>
+						<sourceHighlighter>coderay</sourceHighlighter>
+						<attributes>
+							<icons>font</icons>-->
+							<coderay-css>style</coderay-css>
+							<toc>left</toc>
+							<toclevels>2</toclevels>
+						</attributes>
+					</configuration>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-enforcer-plugin</artifactId>
+				<version>3.0.0-M1</version>
+				<executions>
+					<execution>
+						<id>enforce-maven</id>
+						<goals>
+							<goal>enforce</goal>
+						</goals>
+						<configuration>
+							<rules>
+								<requireMavenVersion>
+									<version>3.3.9</version>
+								</requireMavenVersion>
+							</rules>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>versions-maven-plugin</artifactId>
+				<version>2.5</version>
+				<configuration>
+					<rulesUri>file:///${project.basedir}/etc/version-rules.xml</rulesUri>
+				</configuration>
+				<executions>
+					<execution>
+						<id>show-dep-updates</id>
+						<phase>
+							validate
+						</phase>
+						<goals>
+							<goal>display-dependency-updates</goal>
+						</goals>
+					</execution>
+					<execution>
+						<id>show-plugin-updates</id>
+						<phase>
+							validate
+						</phase>
+						<goals>
+							<goal>display-plugin-updates</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<artifactId>maven-clean-plugin</artifactId>
+				<version>3.1.0</version>
+				<executions>
+					<execution>
+						<phase>pre-site</phase>
+						<goals>
+							<goal>clean</goal>
+						</goals>
+						<configuration>
+							<filesets>
+								<fileset>
+									<directory>${basedir}/docs</directory>
+									<followSymlinks>false</followSymlinks>
+								</fileset>
+							</filesets>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
 
-	<issueManagement>
-		<system>Issue</system>
-		<url>https://github.com/funthomas424242/RADeS/issues</url>
-	</issueManagement>
-
-	<!-- <distributionManagement>
-		<downloadUrl>https://github.com/FunThomas424242/RADeS/downloads</downloadUrl>
-		<snapshotRepository>
-			<id>cloudbees-snapshots</id>
-			<name>Snapshot Repository at CloudBees</name>
-			<uniqueVersion>false</uniqueVersion>
-			<url>https://repository-funthomas424242.forge.cloudbees.com/snapshot/</url>
-		</snapshotRepository>
-		<repository>
-			<id>cloudbees-releases</id>
-			<name>Release Repository at CloudBees</name>
-			<uniqueVersion>false</uniqueVersion>
-			<url>https://repository-funthomas424242.forge.cloudbees.com/release/</url>
-		</repository>
-	</distributionManagement>
- -->
-
-	<scm>
-		<url>https://github.com/FunThomas424242/RADeS</url>
-		<connection>scm:git:git://github.com/funthomas424242/RADeS.git</connection>
-		<developerConnection>scm:git:git@github.com:funthomas424242/RADeS.git</developerConnection>
-	</scm>
+			<plugin>
+				<groupId>com.github.jeluard</groupId>
+				<artifactId>plantuml-maven-plugin</artifactId>
+				<!-- letzte gültige Version, keine Weiterentwicklung mehr, xxxx versionen sind älter -->
+				<version>1.2</version>
+				<dependencies>
+					<dependency>
+						<groupId>net.sourceforge.plantuml</groupId>
+						<artifactId>plantuml</artifactId>
+						<version>8059</version>
+					</dependency>
+				</dependencies>
+				<configuration>
+					<sourceFiles>
+						<directory>${basedir}/src/site/plantuml/</directory>
+						<includes>
+							<include>**/*.txt</include>
+						</includes>
+					</sourceFiles>
+					<outputDirectory>${basedir}/src/site/resources/images</outputDirectory>
+					<outputInSourceDirectory>false</outputInSourceDirectory>
+					<format>svg</format>
+				</configuration>
+				<executions>
+					<execution>
+						<id>run-plantuml</id>
+						<phase>pre-site</phase>
+						<goals>
+							<goal>generate</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-site-plugin</artifactId>
+				<version>3.7.1</version>
+				<configuration>
+					<outputDirectory>${basedir}/docs</outputDirectory>
+					<locales>de</locales>
+					<relativizeDecorationLinks>false</relativizeDecorationLinks>
+				</configuration>
+				<dependencies>
+					<dependency>
+						<groupId>org.asciidoctor</groupId>
+						<artifactId>asciidoctor-maven-plugin</artifactId>
+						<version>1.5.6</version>
+					</dependency>
+					<dependency>
+						<groupId>org.asciidoctor</groupId>
+						<artifactId>asciidoctorj-diagram</artifactId>
+						<version>1.5.9</version>
+					</dependency>
+					<!-- https://mvnrepository.com/artifact/net.sourceforge.plantuml/plantuml -->
+					<dependency>
+						<groupId>net.sourceforge.plantuml</groupId>
+						<artifactId>plantuml</artifactId>
+						<version>8059</version>
+					</dependency>
+					<dependency>
+						<groupId>guru.nidi</groupId>
+						<artifactId>graphviz-java</artifactId>
+						<version>0.5.4</version>
+					</dependency>
+				</dependencies>
+			</plugin>
+		</plugins>
+	</build>
 
 	<developers>
 		<developer>
-			<id>tmichel</id>
-			<name>FunThomas424242</name>
-			<email>funthomas424242@googlemail.com</email>
-			<timezone>+1</timezone>
-			<organization>The world wide open source community</organization>
-			<organizationUrl>https://wiki.fsfe.org/Fellows/FunThomas424242</organizationUrl>
+			<name>FunThomas424242 (Thomas Schubert)</name>
+			<email>funthomas424242@gmail.com</email>
 			<roles>
-				<role>project admin</role>
-				<role>developer</role>
+				<role>project owner</role>
+				<role>author</role>
 			</roles>
 		</developer>
 	</developers>
 
-
-
-
-	<modules>
-        <module>corelibs</module>
-		<module>annotation.processors</module>
-		<module>docbook.style</module>
-		<module>rades.documentation</module>
-	</modules>
-
-	<build>
-		<pluginManagement>
-			<plugins>
-				<plugin>
-					<groupId>org.apache.maven.plugins</groupId>
-					<artifactId>maven-compiler-plugin</artifactId>
-					<version>3.5.1</version>
-					<configuration>
-						<source>1.8</source>
-						<target>1.8</target>
-					</configuration>
-				</plugin>
-				<plugin>
-					<groupId>org.apache.maven.plugins</groupId>
-					<artifactId>maven-site-plugin</artifactId>
-					<version>${mvn.siteplugin.version}</version>
-				</plugin>
-				<!-- plugin> <groupId>com.github.github</groupId> <artifactId>site-maven-plugin</artifactId> 
-					<version>${github.maventools.version}</version> <dependencies> <dependency> 
-					<groupId>org.apache.maven.plugins</groupId> <artifactId>maven-site-plugin</artifactId> 
-					<version>${mvn.siteplugin.version}</version> </dependency> </dependencies> 
-					<configuration> <message>Building site for ${project.version}: ${testonly} 
-					</message> <dryRun>${testonly}</dryRun> <noJekyll>true</noJekyll> <merge>true</merge> 
-					<repositoryName>${github.site.repositoryName}</repositoryName> <repositoryOwner>${github.site.repositoryOwner}</repositoryOwner> 
-					<userName>${github.global.userName}</userName> <password>${github.global.password}</password> 
-					</configuration> <executions> <execution> <goals> <goal>site</goal> </goals> 
-					<phase>site</phase> </execution> </executions> </plugin> -->
-				<plugin>
-					<groupId>org.apache.maven.plugins</groupId>
-					<artifactId>maven-assembly-plugin</artifactId>
-					<version>${maven-assembly-plugin.version}</version>
-				</plugin>
-				<plugin>
-					<groupId>org.codehaus.mojo</groupId>
-					<artifactId>build-helper-maven-plugin</artifactId>
-					<version>1.7</version>
-				</plugin>
-			</plugins>
-		</pluginManagement>
-	</build>
+	<reporting>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-project-info-reports-plugin</artifactId>
+				<version>2.9</version>
+				<reportSets>
+					<reportSet>
+						<configuration>
+							<skip>true</skip>
+						</configuration>
+					</reportSet>
+				</reportSets>
+			</plugin>
+		</plugins>
+	</reporting>
 
 </project>
