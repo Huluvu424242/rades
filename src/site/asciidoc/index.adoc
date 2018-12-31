@@ -22,5 +22,88 @@ include::ziele/Stakeholder.adoc[]
 
 = Randbedingungen
 
-## Technische Randbedingungen
+== Technische Randbedingungen
 
+Programmiersprache:: Für die Entwicklung wird als Programmiersprache Java
+Versionsverwaltung:: Als Versionsverwaltung kommt Git zum Einsatz. Als Hoster eignet sich Github. Über Github lassen sich auch die Bugtracking und Projekt Homepage realisieren.
+Build und Deployment:: Für Build- und Deploymentprozesse soll initial mit Maven 3 gestartet werden. Später soll ein anderes Werkzeug zum Einsatz kommen.
+Continious Integration:: Für die Realisierung des CI Prozesses soll Jenkins in Form eines SaaS zum Einsatz kommen. Als Hoster eignet sich CloudBees.
+
+== Organisatorische Randbedingungen
+
+=== Organisation und Struktur
+
+RADES soll als Open Source Projekt im Internet entwickelt werden. Die Infrastruktur soll generell eine weltweite, verteilte Entwicklung ermöglichen. Initial wird das Projekt mit Fokus auf den deutschen Sprachraum gestartet. Daher erfolgt die Kommunikation und Dokumentation auch in deutscher Sprache. Das Projektinhalt und -ziele werden vom Initiator vorgegeben.
+
+Sollte eine internationale Community entstehen ist die Kommunikation auf englisch umzustellen und bei ausreichend großer Community ein Entscheidungsprozess für die Bestimmung zu realisierender Feature zu etablieren.
+
+=== Resourcen
+
+Für die Entwicklung des Systems stehen keine finanziellen Mittel bereit und eine professionelle Finanzierung ala Crowdfunding ist nicht angedacht.
+
+Zur Verfügung stehen initial ein Entwickler und die frei im Internet verfügbaren Resourcen wie Github, CloudBees, Google etc. Über Github können Versionsverwaltung, Bugtracking und Webseite realisiert werden.
+
+=== Konventionen
+
+Generierung vs. Kodierung:: Es wird davon ausgegangen, dass durch RADES nur ein Teil des Quellkodes vom Zielprogramm generiert werden kann. Der verbleibende Teil muss auf klassischer Weise durch den Entwickler händisch kodiert werden. Da ein Reafactoring im Modell über die Generierung durchaus erhebliche Änderungen im Kompilat hervorrufen kann, sind Abhängigkeiten handkodierter Programmteile von generierten Programmteilen zu vermeiden.
+Aus diesem Grund werden die generierten Programmteile stets in separaten Artifakten bereitgestellt. Diese Artifakten dürfen Abhängigkeiten zu handkodierten Artifakten besitzen, umgekehrt jedoch nicht. Um dem Generator die handkodierten Artifakte bekannt zu machen sind im Modell geeignete Konstrukte zur Verfügung zu stellen.
+
+Modellierung Fachlich vs. Technisch:: Die in RADES zur Spezifikation Verwendung findenden Modelle sind eher technischer Natur. RADES erhebt nicht den Anspruch rein fachliche Modellierung zu ermöglichen. Es wird angenommen, dass eine rein fachliche Modellierung generell nicht möglich ist. Wohl aber soll eine fachliche Domän mit technischen Ausdrucksmitteln modelliert werden können.
+
+= Kontextabgrenzung
+
+== Fachlicher Kontext
+
+== Verteilungskontext
+
+= Lösungsstrategie
+
+Nachdem in der Vergangheit deutliche Nachteile in der Modellgetriebenen Softwareentwicklung zu Tage traten, soll hier ein anderer Lösungsansatz gewählt werden. Die Nachteile langer Entwicklungspausen während der Buildschritte: Generierung und Serverstart sollen wie folgt gemildert werden:
+
+Generierung:: Hier sollen Annotationsprozessoren zum Einsatz kommen.
+
+Serverstart:: Es soll auf OSGi Technologie und Microservices gesetzt werden um nur veränderte Kodeteile neu deployen zu müssen.
+
+Da die erstellten Anwendungen vorzugsweise als Sammlung diverser Microservices verstanden werden sollen, wird primär eine Entwicklung in den Sprachen HTML, JavaScript und Java angedacht. Dabei sollen die Nachteile der nichttypisierten Sprache JavaScript durch Einsatz von Typscript oder Dukescript gemildert werden. Weiterhin werden Technologien wie AngularJS und REST Services über JSON Datenaustausch bevorzugt.
+
+= Bausteinsicht
+
+= Laufzeitsicht
+
+= Verteilungssicht
+
+= Übergreifende Konzepte
+
+= ArchitekturEntscheidungen
+
+include::entscheidungen/EntwicklungsKonfiguration.adoc[]
+
+= Qualitätsszenarien
+
+= Risiken
+
+= Glossar
+
+Domän:: Fachlich zusammengehöriger Bereich. In einem Firmenportal könnten Kundenverwaltung, Angebotsverwaltung und Materialverwaltung als drei fachliche Domänen verstanden werden.
+
+[bibliography]
+.Referenzen
+
+- [[[taoup]]] Eric Steven Raymond. 'The Art of UNIX
+  Programming'. Addison-Wesley. ISBN 0-13-142901-9.
+- [[[docbook-wikipedia2012]]] Wikipedia Artikel zu DocBook.
+  http://en.wikipedia.org/wiki/DocBook.
+- [[[apache-maven-wikipedia2012]]] Wikipedia Artikel zu Apache Maven
+  http://en.wikipedia.org/wiki/Apache_maven
+- [[[DocBook5]]] 'DocBook5: The Definitive Guide 2012' HTML-Version (1.0.1) des Buchs von Norman Walsh
+  http://www.docbook.org/tdg5/
+- [[[DocBook XSL: The Complete Guide 2007]]] DocBook 5 Guide von Bob Stayton
+  http://www.sagehill.net/docbookxsl/index.html
+- [[[DocBook XSL Stylesheets: Reference Documentation]]] Parameter Reference von Norman Walsh
+  http://docbook.xml-doc.org/snapshots/xsl/doc/index.html
+- [[[Docbkx-Tool 2012]]] DocBook Maven Plugin
+  http://docbkx-tools.sourceforge.net/
+- [[[Docbkx User Guide 2012]]] Beispielkonfigurationen für das Maven Docbkx Plugin
+  http://docbkx-tools.sourceforge.net/docbkx-samples/manual.html
+- [[[FOP Pdf-Images 2010]]] Erweiterung für Apache FOP um PDF-Images
+  http://www.jeremias-maerki.ch/download/fop/pdf-images/
