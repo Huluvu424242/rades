@@ -9,4 +9,13 @@
 :numbered:
 
 
+= Einführung und Ziele
+
+include::ziele/Aufgabenstellung.adoc[]
+include::ziele/FunktionaleAnforderungen.adoc[]
+
+
+= Randbedingungen
+
+## Technische Randbedingungen
 

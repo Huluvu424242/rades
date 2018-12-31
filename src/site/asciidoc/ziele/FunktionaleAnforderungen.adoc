@@ -1,0 +1,25 @@
+# Produktbeschreibung
+
+## Produktkarton
+
+image:images/RADeSProduktkarton.png[Rades Produktkarton]
+
+## Funktionale Anforderungen
+
+RADES soll ein Entwicklungssystem für Anwendungssoftware sein. Die Anwendungen sollen in den Bereichen Mobile, Web und Desktop
+    sowohl gleiches Aussehen wie auch Verhalten zeigen. Dabei müssen jedoch auch die Unterschiedlichen Nutzungsformen berücksichtigt werden.
+    So erfordert die Bedienung der erstellten Anwendung auf einem mobilen Gerät andere Navigations- und Eingabemöglichkeiten als auf einem
+    Desktop- oder Websystem.
+
+## Einsatzgebiet
+
+RADES ist für den Einsatz in kleinen Teams gedacht. Als
+    Standardeinsatzfall wird von Feature Teams mit ca. 8 Entwicklern
+    ausgegangen. Es wird vorrausgesetz, dass im Team eine Spezialisierung der
+    Entwickler in folgende Gruppen vorhanden ist:
+
+GUI Entwickler:: Entwickler mit vertieften Kenntnissen aus dem Frontend Bereich. Diese modellieren die Eye View und binden die DSLs anderer Schichten ein.
+Datenbank Entwickler:: Entwickler mit vertieften Kenntnissen aus dem Pereich der Datenbanken. Sehr gute SQL- und Datenbank Kenntnisse sowie ein tieferes Verständnis für Object-Relationales Mapping sind hier vorherrschend.
+Backend Entwickler:: Entwickler mit vertieften Kenntnissen im Bereich der Applikationserver. Es wird ein sehr gutes Verständnis für die Entwicklung in Containergesteuerten Umgebungen sowie in verteilten Systemen vorrausgesetzt. Weiterhin wird erwartet, dass die Entwickler mit Enterprise Technologien wie EJB, CDI und marktüblichen Frameworks wie aktuell Spring vertraut sind.
+
+RADES soll bevorzugt agile Arbeitsweisen unterstützen. So soll beispielsweise ein Arbeiten nach der Flow Design Methode direkt möglich sein und durch Sprachkonstrukte unterstützt werden.
