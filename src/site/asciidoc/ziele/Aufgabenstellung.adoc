@@ -1,6 +1,6 @@
-# Aufgabenstellung
+== Aufgabenstellung
 
-## Bestandsaufnahmme
+=== Bestandsaufnahmme
 
 Bei der Entwicklung mehrschichtiger oder verteilter Anwendungen
     führen aktuell auch kleine Anpassungen bereits zu hohen Wartungsaufwänden.

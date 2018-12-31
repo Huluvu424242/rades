@@ -1,6 +1,6 @@
-# Qualitätsziele
+== Qualitätsziele
 
-## Bedienbarkeit
+=== Bedienbarkeit
 
 Von RADES als eine Desktopanwendung welche für Entwickler als
 					Endnutzer gedacht ist wird eine sehr gute Bedienbarkeit erwartet.
@@ -10,7 +10,7 @@ Von RADES als eine Desktopanwendung welche für Entwickler als
 					empfunden
 					werden und muss sich wahlweise per Maus oder Tastatur bedienen lassen.
 
-## Änderbarkeit
+=== Änderbarkeit
 
 RADES ist als Entwicklerwerkzeug in einem schnellebigen Markt
 					platziert. Es ist davon auszugehen, dass das Produkt ständigen
@@ -23,7 +23,7 @@ Wesentlich wichtiger noch ist jedoch die Änderbarkeit der von
 					technologieneutral aufgebaut sein. So sollte der Austausch der
 					Persistenztechnologie per Option wählbar sein.
 
-## Sicherheit
+=== Sicherheit
 
 Bei der Benutzung von RADES ist von einem Einsatz in
 					Mehrbenutzerumgebungen auszugehen. Daher sind Zugangsdaten oder
@@ -34,14 +34,14 @@ Ein Angriff aus dem Internet oder anderen Netzwerken ist nicht
                     Einsatzort über entsprechende Betriebsabteilungen sicherzustellen.
 
 
-## Testbarkeit
+=== Testbarkeit
 
 RADES soll generell automatisch testbar sein und auch durch
 					eine
 					automatische Testsuite für Regressionstests abgesichert werden.
 
 
-## Verfügbarkeit
+=== Verfügbarkeit
 
 RADES selbst ist ein Entwicklerwerkzeug und muss als solches
 					keinen Hochverfügbarkeitsansprüchen genügen. Wenn das Werkzeug
@@ -58,7 +58,7 @@ Programme welche mit RADES erstellt werden, sollten jedoch
 					allem im Enterprise Umfeld eingesetzt werden.
 
 
-## Performanz
+=== Performanz
 
 RADES ist als Desktopanwendung zu sehen und muss nicht
 					tausende
