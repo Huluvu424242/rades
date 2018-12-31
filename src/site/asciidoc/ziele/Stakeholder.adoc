@@ -1,0 +1,23 @@
+== Stakeholder
+
+Der wichtigste Stakeholder für das Projekt bin ich selbst. Es
+				soll
+				vor allem meine Anforderungen erfüllen.
+
+Weitere wichtige Stakeholder sind alle Open Source Entwickler
+				weltweit, welche in den Bereichen Domän Driven Development oder
+				Model
+				Driven Development arbeiten bzw. Java Entwickler die das System nutzen
+				wollen um schneller von der Anforderung zum fertigen Programm zu
+				kommen.
+
+Möglicherweise interessieren sich auch Firmen für das Projekt.
+				Diese stehen jedoch nicht im Fokus. Eine Ausnahme bilden Firmen
+				welche
+				selber Open Source Programme erstellen.
+
+Weitere Stakeholder sind auch Internetprovider und
+				Portalbetreiber. Die eingesetzten Technologien müssen auf ihre
+				Praxistauglichkeit hinsichtlich der im Open Source Bereich gängigen
+				Portale untersucht werden.
+
