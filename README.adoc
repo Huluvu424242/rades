@@ -1,6 +1,8 @@
 [#status]
 image:https://img.shields.io/badge/License-FDL%20v1.3-blue.svg[link="https://www.gnu.org/licenses/fdl-1.3"]
 image:https://travis-ci.org/PIUGroup/rades.svg?branch=master["Build Status", link="https://travis-ci.org/PIUGroup/rades"]
+image:https://badge.waffle.io/PIUGroup/rades.svg?columns=all["Waffle.io - Columns and their card count", link="https://waffle.io/PIUGroup/rades"]
+
 
 # RADES
 
