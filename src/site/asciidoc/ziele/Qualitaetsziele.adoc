@@ -1,0 +1,74 @@
+# Qualitätsziele
+
+## Bedienbarkeit
+
+Von RADES als eine Desktopanwendung welche für Entwickler als
+					Endnutzer gedacht ist wird eine sehr gute Bedienbarkeit erwartet.
+					Die
+					Anwendung muss sich intuitiv bedienen lassen und soll leicht zu
+					konfigurieren sein. Die Benutzeroberfläche soll als angenehm
+					empfunden
+					werden und muss sich wahlweise per Maus oder Tastatur bedienen lassen.
+
+## Änderbarkeit
+
+RADES ist als Entwicklerwerkzeug in einem schnellebigen Markt
+					platziert. Es ist davon auszugehen, dass das Produkt ständigen
+					Anpassungen an sich änderende Technologien und Organisationsformen
+					unterworfen ist. Daher muss RADES sehr leicht und ohne Erzeugung
+					größerer Aufwände anpassbar sein.
+
+Wesentlich wichtiger noch ist jedoch die Änderbarkeit der von
+					RADES erstellten Programme. Diese sollten generell modular und
+					technologieneutral aufgebaut sein. So sollte der Austausch der
+					Persistenztechnologie per Option wählbar sein.
+
+## Sicherheit
+
+Bei der Benutzung von RADES ist von einem Einsatz in
+					Mehrbenutzerumgebungen auszugehen. Daher sind Zugangsdaten oder
+					weitere Credentials vor dem Zugriff anderer Nutzer zu schützen.
+
+Ein Angriff aus dem Internet oder anderen Netzwerken ist nicht
+                    zu berücksichtigen. Diese Gefahren sind vom Nutzer selbst am
+                    Einsatzort über entsprechende Betriebsabteilungen sicherzustellen.
+
+
+## Testbarkeit
+
+RADES soll generell automatisch testbar sein und auch durch
+					eine
+					automatische Testsuite für Regressionstests abgesichert werden.
+
+
+## Verfügbarkeit
+
+RADES selbst ist ein Entwicklerwerkzeug und muss als solches
+					keinen Hochverfügbarkeitsansprüchen genügen. Wenn das Werkzeug
+					ausfällt, kann es problemlos neu gestartet werden. Ein Ausfall
+					führt
+					zwar zum Verlust von Arbeitszeit jedoch nicht von kritischen Resourcen
+					und führt auch nicht zu extrem negativer Aussenwirkung wie
+					beispielsweise beim Ausfall eines Onlinemarktes.
+
+
+Programme welche mit RADES erstellt werden, sollten jedoch
+					auch
+					Hochverfügbarkeitsansprüchen genügen da mehrschichtige Anwendungen vor
+					allem im Enterprise Umfeld eingesetzt werden.
+
+
+## Performanz
+
+RADES ist als Desktopanwendung zu sehen und muss nicht
+					tausende
+					von Anfragen pro Zeiteinheit abarbeiten. Daher ist das Produkt auch
+					nicht im Highperformance Sektor einzuordnen. Eine niedrige
+					Performance
+					ist soweit akzeptabel wie die Benutzbarkeit des Produktes nicht
+					darunter leidet. Wartezeiten im Nutzerdialog sind so gering wie
+					möglich zu halten. Wartezeiten bei Prozessen wie Generierung,
+					Compilierung oder Deployment sollten in für Desktopwerkzeuge
+					üblichen
+					Größenordnungen oder darunter liegen.
+

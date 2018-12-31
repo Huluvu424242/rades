@@ -13,6 +13,8 @@
 
 include::ziele/Aufgabenstellung.adoc[]
 include::ziele/FunktionaleAnforderungen.adoc[]
+include::ziele/Qualitaetsziele.adoc[]
+include::ziele/Stakeholder.adoc[]
 
 
 = Randbedingungen
