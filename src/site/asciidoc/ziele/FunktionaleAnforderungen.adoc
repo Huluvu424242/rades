@@ -2,7 +2,7 @@
 
 === Produktkarton
 
-image:images/RADeSProduktkarton.png[Rades Produktkarton]
+image:images/RADESProduktkarton.svg[Rades Produktkarton]
 
 === Funktionale Anforderungen
 
@@ -23,3 +23,13 @@ Datenbank Entwickler:: Entwickler mit vertieften Kenntnissen aus dem Pereich der
 Backend Entwickler:: Entwickler mit vertieften Kenntnissen im Bereich der Applikationserver. Es wird ein sehr gutes Verständnis für die Entwicklung in Containergesteuerten Umgebungen sowie in verteilten Systemen vorrausgesetzt. Weiterhin wird erwartet, dass die Entwickler mit Enterprise Technologien wie EJB, CDI und marktüblichen Frameworks wie aktuell Spring vertraut sind.
 
 RADES soll bevorzugt agile Arbeitsweisen unterstützen. So soll beispielsweise ein Arbeiten nach der Flow Design Methode direkt möglich sein und durch Sprachkonstrukte unterstützt werden.
+
+Anbei die Aufzählung einiger Features:
+
+* Anonyme Anmeldung soll möglich sein
+* Beliebig viele Accounts pro Person sollen unterstützt werden
+* Verschlüsselte Speicherung der Daten (idealerweise bleiben meine Daten auf meinen Clients und laden nicht auf anderen Rechnern)
+* Verschlüsselung mit PGP z.B. per USB Card Reader
+* Hinterlegung von Fantasiedaten möglich
+* Einsatz als Server wie auch als Client möglich
+* Dezentrale Arbeitsweise ist zwingend notwendig um Abschaltung zu verhindern.

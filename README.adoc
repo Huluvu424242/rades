@@ -7,18 +7,5 @@ image:https://badge.waffle.io/PIUGroup/rades.svg?columns=all["Waffle.io - Column
 # RADES
 
 
-
-
 Hier gehts zur link:https://PIUGroup.github.io/rades/[Projektdokumentation]
-
-## Notizen zum ursprünglichen Projektstart
-
-### Fachliche Seite des Produktkartons (allgemeine fachliche Anforderungsideen für RADES Produkte)
-* Anonyme Anmeldung soll möglich sein
-* Beliebig viele Accounts pro Person sollen unterstützt werden
-* Verschlüsselte Speicherung der Daten (idealerweise bleiben meine Daten auf meinen Clients und laden nicht auf anderen Rechnern)
-* Verschlüsselung mit PGP z.B. per USB Card Reader
-* Hinterlegung von Fantasiedaten möglich
-* Einsatz als Server wie auch als Client möglich
-* Dezentrale Arbeitsweise ist zwingend notwendig um Abschaltung zu verhindern.
 
