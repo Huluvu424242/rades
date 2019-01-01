@@ -1,0 +1,99 @@
+== Welche Entwicklungskonfiguration?
+
+=== Zur Fragestellung
+
+Bei der Frage geht es um die Konfiguration des Entwicklungsrechners.
+
+=== Relevante Einflußfaktoren
+
+* Zeitdauer der Iterationen bei Änderungen während der Entwicklung
+  und Anpassung von Kode.
+
+=== Annahmen
+
+* Es wird angenommen, dass letztlich eine größere Anwendung entsteht
+  mit vielen Tausend LOCs. Weiterhin wird angenommen, dass sich der OSGI
+  Container bei großen Anwendungen ähnlich wie bei kleinen Anwendungen
+  verhält, da immer nur kleine Teile (Bundles) zu starten, zu stoppen und
+  auszustauschen sind.
+
+=== Betrachtete Alternativen
+
+Als Alternativen wurden folgende Konfigurationen betrachtet:
+
+. Eclipse, JRebel, Oracle Applicationsserver, Maven (praktische Erfahrungen liegen vor)
+. Eclipse, BNDTools, Apache Felix, Maven (es liegen keine praktischen Erfahrungen vor)
+
+=== Deployment in einen Applikationsserver
+
+Es wurden die vorhandenen Erfahrungen ausgewertet. Es lagen nur
+Erfahrungen mit folgender Systemkonfiguration vor:
+
+IDE:: Eclipse
+Applikationsserver:: Oracle Weblogic 10
+
+(+):: Dieses Konzept ist bekannt, sowohl mit seinen Vor- wie auch mit
+      seinen Nachteilen. Es hat sich in der Praxis bereits als trägfähig
+      erwiesen und beinhaltet somit nur ein sehr geringes Risiko.
+(-):: Zeitdauer bis der Entwickler Feedback zur gerade implementierten
+      Änderung bekommt. Bei typischen Applikationserver Anwendungen sind
+      folgende Schritte im Entwicklungsprozess notwendig:
+
+      . *Start des Servers*
+        Dieser Schritt benötigt bei großen Anwendungen die wenigste
+        Zeitdauer (meist ein Bruchteil des Deployments).
+      . *Deployment der Anwendung*
+        Dieser Schritt dauert schon bei kleinen Anwendungen lange,
+        allerdings steigert sich die Zeitdauer mit der Größe und der Anzahl
+        neuer Deployments ständig.
+      . *Start des Browsers*
+        Dieser Schritt benötigt vergleichsweise wenig Zeit. Abhängig
+        von der Anwendungslogik zum Login kann der Browser auch im
+        Hintergrund laufen gelassen werden.
+      . *Anmeldung an der Anwendung*
+        Dieser Schritt ist nur bei manchen Anwendungen notwendig.
+      . *Vor der nächsten Änderung ist der Server zu stoppen oder die Anwendung aus dem Server zu entfernen (undeployment).*
+        Dieser Schritt ist in der Regel notwendig da sonst nicht
+        nachvollziehbare Fehler im Deployment (Caching Probleme, alte
+        Klassen, alte Webseiten, ...) auftreten können.
+
+Durch den Einsatz von spezialisierten Werkzeugen wie JRebell kann
+das Hotdeployment deutlich verbessert werden. Allerdings funktioniert
+dies nicht zuverlässig in allen Fällen. In folgenden Fällen ist ein
+erneutes Deployment notwendig:
+
+* Einfügen, Löschen oder Änderungen an Konstanten im Java Kode.
+* Änderungen an statische Initialisierungsblöcken.
+* Änderungen an grundlegenden Konfigurationen (Spring Konfiguration, web.xml, ...)
+
+=== Deployment in einen OSGI Container
+
+Hierzu liegen keine praktischen Erfahrungen vor. Auf Grund der
+Informationen über die OSGI Technologie werden folgende Vor- und
+Nachteile als gegeben angenommen.
+
+Generell lassen sich über einen OSGI Container ebenfalls
+Webapplikationen entwickeln. Jedoch können die in den Container zu
+deployenden Teile deutlich kleiner gehalten werden.
+
+(+):: Der OSGI Container braucht in der Entwicklung nicht gestoppt
+      werden, er kann kontinuierlich laufen. Über die BNDTools kann der
+      Container direkt innerhalb von Eclipse gestartet werden. Bei Änderungen
+      müssen nur die veränderten Bundles neu deployed werden. Das sind in der
+      Regel deutlich kleinere Teile als die komplette Anwendung.
+(-):: Bei einer Entscheidung für den OSGI Container besteht das Risiko,
+      dass später auf einen Applikationsserver umgestellt werden muss. Dies
+      gilt zumindest wenn das Konzept OSGI sich als nicht trägfähig
+      erweist.
+
+=== Entscheidung
+
+Es wird sich für den Einsatz des OSGI Containers entschieden auch
+wenn dies ein größeres Risiko hinsichtlich des zu veranschlagenden
+Entwicklungsaufwandes birgt.
+
+
+
+
+
+
