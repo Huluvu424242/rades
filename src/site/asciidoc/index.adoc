@@ -97,13 +97,38 @@ Domän:: Fachlich zusammengehöriger Bereich. In einem Firmenportal könnten Kun
   http://en.wikipedia.org/wiki/Apache_maven
 - [[[DocBook5]]] 'DocBook5: The Definitive Guide 2012' HTML-Version (1.0.1) des Buchs von Norman Walsh
   http://www.docbook.org/tdg5/
-- [[[DocBook XSL: The Complete Guide 2007]]] DocBook 5 Guide von Bob Stayton
+- [[[DocBook5XSLGuide]]] DocBook 5 Guide 2007 von Bob Stayton
   http://www.sagehill.net/docbookxsl/index.html
-- [[[DocBook XSL Stylesheets: Reference Documentation]]] Parameter Reference von Norman Walsh
+- [[[DocBookXSLStylesheets]]]DocBook XSL Stylesheets: Reference Documentation. Parameter Reference von Norman Walsh
   http://docbook.xml-doc.org/snapshots/xsl/doc/index.html
-- [[[Docbkx-Tool 2012]]] DocBook Maven Plugin
+- [[[DocbkxTool2012]]] Docbkx-Tool 2012. DocBook Maven Plugin
   http://docbkx-tools.sourceforge.net/
-- [[[Docbkx User Guide 2012]]] Beispielkonfigurationen für das Maven Docbkx Plugin
+- [[[DocbkxUserGuide2012]]] Docbkx User Guide 2012.Beispielkonfigurationen für das Maven Docbkx Plugin
   http://docbkx-tools.sourceforge.net/docbkx-samples/manual.html
-- [[[FOP Pdf-Images 2010]]] Erweiterung für Apache FOP um PDF-Images
+- [[[FOPPdf-Images2010]]] FOP Pdf-Images 2010.Erweiterung für Apache FOP um PDF-Images
   http://www.jeremias-maerki.ch/download/fop/pdf-images/
+- [[[POMReference2012]]] POM Reference 2012. Konfiguration einer Maven pom-Datei
+  http://maven.apache.org/pom.html
+- [[[ProcessingXMLwithJava2002]]] Processing XML with Java 2002. Beschreibung von Elliotte Rusty Harold wie man XSLT um Java erweitert
+  http://cafeconleche.org/books/xmljava/chapters/ch17s03.html
+- [[[EXSLT2006]]] EXSLT 2006. Erweiterung von XSLT um neue Funktionen
+  http://www.exslt.org/
+- [[[XMLBible2001]]] XML Bible 2001. Fünf Beispielkapitel aus der XML Bibel von Elliotte Rusty Harold
+  http://www.cafeconleche.org/books/bible2/chapters/
+- [[[DocBookFAQ]]] DocBook FAQ. Häufig gestellte Fragen zu DocBook
+  http://www.dpawson.co.uk/docbook/
+- [[[XSLFAQ]]] XSL FAQ. Häufig gestellte Fragen zu XSL
+  http://www.dpawson.co.uk/xsl/index.html
+- [[[MavenDocbookBeginners2010]]] Maven Docbook for beginners 2010. Quick Start für Docbook mit Maven
+  http://www.vineetmanohar.com/2010/02/maven-docbook-for-beginners/
+- [[[XMLmindXMLEditor2012]]] XMLmind XML Editor 2012. Editor für Docbook-Dokumente
+  http://www.xmlmind.com/xmleditor/
+- [[[XSL-FOTutorial2012]]] XSL-FO Tutorial 2012. XSL-FO Tutorial mit Anwendungsbeispielen
+  http://www.data2type.de/xml-xslt-xslfo/xsl-fo
+- [[[XSL-FOTutorial2007]]] XSL-FO Tutorial 2007. XSL-FO Tutorial als PDF
+  http://www.ecrion.com/Support/PDF/XSL-FOTutorial.pdf
+- [[[DocBookWiki2012]]] DocBook Wiki 2012. Wiki von NormanWalsh über DocBook
+  http://wiki.docbook.org/Home
+- [[[UsingDocBookXSLStylesheets2003]]] Using DocBook XSL Stylesheets 2003. Anleitung für DocBook XSL Stylesheets von Robert Stayton
+  http://xml.web.cern.ch/XML/www.sagehill.net/xml/docbookxsl/index.html
+  
