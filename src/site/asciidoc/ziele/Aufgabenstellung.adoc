@@ -1,0 +1,16 @@
+== Aufgabenstellung
+
+=== Bestandsaufnahmme
+
+Bei der Entwicklung mehrschichtiger oder verteilter Anwendungen
+    führen aktuell auch kleine Anpassungen bereits zu hohen Wartungsaufwänden.
+    Das Hinzufügen eines Eingabefeldes beispielsweise erfordert Änderungen in
+    jeder Schicht bzw. Anpassungen am Server- wie auch am Clientprogramm.
+    Dabei unterscheiden sich die anfallenden Tätigkeiten beispielsweise beim
+    Hinzufügen von Eingabefelder gleichen Types etwa Name und Vorname kaum von
+    einander. Wohl aber muss in jeder Schicht eine andere Anpassung
+    vorgenommen werden.
+
+Zur Bewahrung der Wartbarkeit werden hohe Anforderungen an die Kodequalität und damit an
+Programmierstil und Arbeitsweisen der Entwickler gestellt.
+
