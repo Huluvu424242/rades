@@ -8,6 +8,13 @@
 :toc: left
 :numbered:
 
+= Projektbeschreibung
+
+RADES steht für Rapid Application Development System - also schnelles Anwendungsentwicklungs System.
+
+Basierend auf Annotationen in Kombination mit DSLs (Domän spezifischen Sprachen) soll durch RADeS
+Programmkode generiert werden (In Form eines Mixes aus Domain Driven Development und Model Driven Development).
+
 
 = Einführung und Ziele
 
