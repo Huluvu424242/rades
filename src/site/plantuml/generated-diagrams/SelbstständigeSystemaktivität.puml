@@ -1,0 +1,15 @@
+@startuml
+
+state "Das System <Systemname>" as system
+state "muss | sollte | wird" as verbindlichkeit
+state " " as leer
+state "<Objekt & Objektergänzung>" as objekt
+state "<Prozesswort>" as prozesswort
+
+system --> verbindlichkeit
+verbindlichkeit --> leer
+leer --> objekt
+objekt -> prozesswort
+
+
+@enduml

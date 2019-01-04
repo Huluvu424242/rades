@@ -1,8 +1,13 @@
 
 = Sophist Regelwerk
 
-== Selbständige Systemaktivität
+== RequirementsTemplate
 
 image:images/generated-diagrams/RequirementsTemplate.svg[]
 
+== Selbständige Systemaktivität
+
+Das System startet die Aktivität selbsständig, der Nutzer tritt dabei nicht in Erscheinung.
+
+image:images/generated-diagrams/SelbstständigeSystemaktivität.svg[]
 
