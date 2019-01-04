@@ -3,5 +3,6 @@
 
 == Selbständige Systemaktivität
 
+image:images/generated-diagrams/RequirementsTemplate.svg[]
 
 
