@@ -15,6 +15,7 @@ RADES steht für Rapid Application Development System - also schnelles Anwendung
 Basierend auf Annotationen in Kombination mit DSLs (Domän spezifischen Sprachen) soll durch RADeS
 Programmkode generiert werden (In Form eines Mixes aus Domain Driven Development und Model Driven Development).
 
+include::sophist-regelwerk/SophistRegelwerk.adoc[]
 
 = Einführung und Ziele
 
