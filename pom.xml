@@ -198,7 +198,7 @@
 					<sourceFiles>
 						<directory>${basedir}/src/site/plantuml/</directory>
 						<includes>
-							<include>**/*.txt</include>
+							<include>**/*.puml</include>
 						</includes>
 					</sourceFiles>
 					<outputDirectory>${basedir}/src/site/resources/images</outputDirectory>
