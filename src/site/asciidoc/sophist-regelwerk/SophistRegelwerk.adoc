@@ -5,9 +5,51 @@
 
 image:images/generated-diagrams/RequirementsTemplate.svg[]
 
-== Selbständige Systemaktivität
+== Schablonen ohne Bedingung
 
-Das System startet die Aktivität selbsständig, der Nutzer tritt dabei nicht in Erscheinung.
+=== Selbständige Systemaktivität
+
+* Das System startet die Aktivität selbsständig.
+* Der Nutzer tritt dabei nicht in Erscheinung.
 
 image:images/generated-diagrams/SelbstständigeSystemaktivität.svg[]
+
+Beispiel: Die Webanwendung muss die eingegebenen Daten anzeigen.
+
+=== Benutzerinteraktion
+
+* Das System stellt dem Nutzer eine Funktionalität zur Verfügung, welche dieser startet.
+* Das System tritt mit dem Nutzer in Interaktion.
+
+image:images/generated-diagrams/Benutzerinteraktion.svg[]
+
+Beispiel: Die Webanwendung muss dem Internetnutzer die Möglichkeit bieten die ausgefüllten Formulardaten zu drucken.
+
+=== Schnittstellenanforderung
+
+* Das System führt nur in Abhängigkeit von Dritten (anderen Systemen) eine Aktion aus.
+* Das System ist passiv und wartet auf externes Ereignis.
+
+image:images/generated-diagrams/Schnittstellenanforderung.svg[]
+
+Beispiel: Die Webanwendung muss fähig sein Personaldaten einer anderen Anwendung zu importieren.
+
+== Typische Fehler im Requirements Engineering
+
+Unklar formulierte Anforderungen:: sind interpretierbar
+
+Fehlende Anforderungen:: die Lücke wird der Entwickler durch eigene Entscheidungen schließen.
+
+Lückenhafte Anforderungen durch implizites Wissen:: Selbstverständliches wird meist nicht dokumentiert und führt bei Fluktuationen zu fehlenden Anforderungen.
+
+Kommunikationsprobleme zwischen Beteiligten:: beispielsweise durch unterschiedlichen Erfahrungs- und Wissensstand.
+
+== Zu dokumentierende Dinge
+
+Stakeholder:: ist eine Person oder Organisation, die direkt oder indirekt Einfluss auf die Anforderungen haben oder von den Auswirkungen des geforderten Systems betroffen sind.
+
+
+== Kommunikation der Anforderungen
+
+
 
