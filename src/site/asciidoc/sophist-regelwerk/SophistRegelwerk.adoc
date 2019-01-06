@@ -1,55 +1,197 @@
 
 = Sophist Regelwerk
 
-== RequirementsTemplate
+== Zu dokumentierende Dinge
 
-image:images/generated-diagrams/sophistregelwerk/RequirementsTemplate.svg[]
+=== Ziele
 
-== Schablonen ohne Bedingung
+Die Ziele welche durch die Einführung oder Erstellung des neuen Systems erreicht werden sollen, sind zu dokumentieren um später den Erreichungsgrad zu bestimmen.
 
-=== Selbständige Systemaktivität
 
-* Das System startet die Aktivität selbsständig.
-* Der Nutzer tritt dabei nicht in Erscheinung.
+=== Stakeholderliste
 
-image:images/generated-diagrams/sophistregelwerk/SelbstständigeSystemaktivität.svg[]
+Stakeholder:: ist eine Person oder Organisation, die direkt oder indirekt Einfluss auf die Anforderungen haben oder von
+den Auswirkungen des geforderten Systems betroffen sind.
 
-Beispiel: Die Webanwendung muss die eingegebenen Daten anzeigen.
+Folgede Informationen zu Stakeholdern sind wichtig:
+* Rolle im Unternehmen/Organisiation
+* Wichtigkeit -> Entscheider ja/nein
+* Grundlegende Interessen und Ziele
 
-=== Benutzerinteraktion
+=== Prozesswortliste
 
-* Das System stellt dem Nutzer eine Funktionalität zur Verfügung, welche dieser startet.
-* Das System tritt mit dem Nutzer in Interaktion.
+image:images/sophistregelwerk/SchabloneFürDieProzesswortliste.svg[]
 
-image:images/generated-diagrams/sophistregelwerk/Benutzerinteraktion.svg[]
+=== Glossar
 
-Beispiel: Die Webanwendung muss dem Internetnutzer die Möglichkeit bieten die ausgefüllten Formulardaten zu drucken.
+Glossar:: ist eine Sammlung von Begriffsdefinitionen
 
-=== Schnittstellenanforderung
+Aufgabe ist es:
 
-* Das System führt nur in Abhängigkeit von Dritten (anderen Systemen) eine Aktion aus.
-* Das System ist passiv und wartet auf externes Ereignis.
+* Den Begriffen einheitliche Bedeutungen zuzuordnen um die Verständlichkeit der Anforderungen zu steigern.
+* Missverständnisse bzw. unterschiedliche Interpretationen zu vermeiden
 
-image:images/generated-diagrams/sophistregelwerk/Schnittstellenanforderung.svg[]
+Beispiel: Der nächste Sprint befasst sich mit dem Ausbau der Personalverwaltung.
 
-Beispiel: Die Webanwendung muss fähig sein Personaldaten einer anderen Anwendung zu importieren.
+Handelt es sich um das Entfernen des Personalverwaltungs Modules oder soll dieses Modul weiter ausgebaut werden also neue Features und Funktionen erhalten.
+
+Inhalt des Glossars:
+
+* Fachbegriffe
+* Abkürzungen
+* Alltägliche Begriffe welche im fachlichen Kontext eine spezifische Bedeutung haben
+* Synonyme (Verschiedene Begriffe gleiche Bedeutung)
+* Homonyme (Verschiedene Bedeutung gleicher Begriff)
+
+image:images/sophistregelwerk/SchabloneFürAbkürzungen.svg[]
+image:images/sophistregelwerk/SchabloneFürVerbindlicheBegriffeUndGlossar.svg[]
+image:images/sophistregelwerk/SchabloneFürAllgemeineBegriffeUndGlossar.svg[]
+
+
+== Anforderungsarten
+
+=== Funktionale Anforderungen
+
+Eine funktionale Anforderung ist eine Anforderung an das Ergebnis oder das Verhalten der Funktion eines Systems.
+
+Arten funktionaler Anforderungen
+
+* Strukturanforderung
+** Statisch-strukturell
+** Nutzungs- und Abhängigkeitsbeziehungen des Systems im Systemkontext
+** Beispielsweise die Struktur von Ein- und Ausgabedaten
+** Beispielsweise die nutzenden Dienste eine externen Systems
+* Funktionsanforderung
+** Welche Daten aus dem Systemkontext werden vom System manipuliert?
+** Welche Daten fließen vom System in den Systemkontext?
+* Verhaltensanforderung
+** Zustandsorientiert
+** Das System und dessen Einbettung im Systemkontext
+** Beispielsweise Reaktion des Systems auf Ereignisse
+** Beispielsweise Bedingungen eines Zustandswechsels
+
+=== Nicht funktionale Anforderungen
+
+Nicht funktionale Anforderungen sind ein Oberbegriff für:
+
+* Qualtitätsanforderungen
+* Randbedingungen
+
+
+== Kommunizieren der Anforderungen
+
+Anforderungen müssen kommuniziert werden, dabei treten Probleme auf:
+
+Unterschiedliche Begriffswelten:: Probleme beim Austausch von Informationen
+Art des Kommunikationsmediums:: Nicht jedes ist geeignet, manches enthält viel Redundanzen (Mündliche Kommunikation),
+ein Anderes ist eher formal und nicht auf Rückfragen ausgelegt (Technische/schriftliche Kommunikation)
+Sprachliche Bequemlichkeit:: Probleme bei der Informationsweitergabe
+Implizites Vorwissen: Kommunikationspartner setzen oft Vorwissen voraus, welches zu Vereinfachungen im Sprachgebrauch führt
+Vereinfachungen:: im sprachlichen Ausdruck sind problematisch
+
 
 == Typische Fehler im Requirements Engineering
 
 Unklar formulierte Anforderungen:: sind interpretierbar
-
 Fehlende Anforderungen:: die Lücke wird der Entwickler durch eigene Entscheidungen schließen.
-
 Lückenhafte Anforderungen durch implizites Wissen:: Selbstverständliches wird meist nicht dokumentiert und führt bei Fluktuationen zu fehlenden Anforderungen.
-
 Kommunikationsprobleme zwischen Beteiligten:: beispielsweise durch unterschiedlichen Erfahrungs- und Wissensstand.
 
-== Zu dokumentierende Dinge
-
-Stakeholder:: ist eine Person oder Organisation, die direkt oder indirekt Einfluss auf die Anforderungen haben oder von den Auswirkungen des geforderten Systems betroffen sind.
 
 
-== Kommunikation der Anforderungen
+== Merkmale guter Anforderungen
+
+Bewertet:: z.B. nach rechtlicher Verbindlichkeit
+Eindeutigkeit:: keine Interpretation möglich
+Korrekt:: wahre Aussagen
+Konsistent:: keine Widersprüche zu anderen Anforderungen
+Prüfbar:: Automatisiert durch Tests überprüfbar
+Verfolgbar:: Ursprung und Beziehungen klar erkennbar
+Vollständig:: Es gibt keine Lücken welche der Entwickler selbst füllen muss.
+Abgestimmt:: Mit allen Stakeholdern abgestimmt und alle sind einverstanden
+Gültig und aktuell:: Nach Realisierung vorheriger Anforderungen ergeben sich möglicherweise Abweichungen,
+weshalb nachfolgende Anforderungen überprüft und ggf. aktualisiert werden müssen.
+Realisierbar:: Technische Machbarkeit muss rechtzeitig geklärt sein.
+Verständlich:: Jeder Stakeholder muss die Anforderung verstehen können.
+Eine Anforderung pro Satz:: Wichtig ist, dass je Anforderung nur ein Verb benutzt wird.
+Kurze Sätze, kurze Absätze:: Maximal 7 Sätze je Absatz. Dienen der Verständlichkeit.
+
+
+== Formulierung der Anforderungen
+
+* Je Anforderung ein Satz und nur ein Verb.
+* Sätze im aktiv bilden.
+* Akteure erfragen und einsetzen
+* Prozesse durch gute Vollverben ausdrücken
+* Auflösen von Normalisierungen. BeispieL. Archivierung steht für archivieren. Was muss archiviert werden? Das Wort Archivierung sollte in der Anforderung nicht mehr auftreten.
+* Funktionsverbgefüge auflösen:
+** Nachdem ein Leihobjekt entliehen wurde, muss der Status des Leihobjektes eine Veränderung erfahren.
+* Für jedes Prozesswort ist genau ein Anforderungssatz zu schreiben
+* Fehlende Informationen zum Prozesswort analysieren
+* Fehlende Informationen zum Eigenschaftswort analysieren
+* Eigenschaftswörter mess- und testbar formulieren
+* Für nicht funktionale Aspekte sind eigene Anforderungen zu formulieren
+* Hinterfragen von Zahl- und Mengenwörter
+* Fehlende Zahl- und Mengenwörter klären
+* Hinterfragen schwammiger Substantive
+** Beispiel: dem Anwender -> welchem Anwender? dem Internetnutzer, dem angemeldeten?
+* Mögliches und Unmögliches klären
+** Beispiel: Es darf nicht möglich sein Personen unter 18 Jahren zu registrieren. -> Einverständniserklärung hochgeladen?
+* Unbedeutende Informationen extrahieren
+* Redundante Informationen vermeiden
+* Identifizieren der Ausnahmen vom Normalverhalten
+* Unvollständige Bedingungsstrukturen analysieren.
+* Implizite Annahmen analysieren.
+
+== RequirementsTemplate
+
+=== Rechtliche Verbindlichkeit
+muss:: Ausdruck für verpflichtende Verbindlichkeit, bei Nichterfüllung ist eine Verweigerung der Abnahme möglich (MVP)
+sollte:: Nicht verpflichtende Verbindlichkeit aber ausdrücklicher Wunsch der Stakeholder (1. Ausbauphase)
+wird:: Formulierung langfristiger Ziele. Die Berücksichtigung der Zielvision in der aktuellen Lösung ist verpflichtend um später Mehraufwände zu vermeiden.
+(Diskussionswürdiger Punkt unter agilen Gesichtspunkten)
+
+=== Schablonen ohne Bedingung
+
+image:images/sophistregelwerk/SchabloneOhneBedingung-Syntax.svg[]
+
+==== Selbständige Systemaktivität
+
+* Das System startet die Aktivität selbsständig.
+* Der Nutzer tritt dabei nicht in Erscheinung.
+
+image:images/sophistregelwerk/SchabloneOhneBedingung-SelbstständigeSystemaktivität.svg[]
+
+Beispiel: Die Webanwendung muss die eingegebenen Daten anzeigen.
+
+==== Benutzerinteraktion
+
+* Das System stellt dem Nutzer eine Funktionalität zur Verfügung, welche dieser startet.
+* Das System tritt mit dem Nutzer in Interaktion.
+
+image:images/sophistregelwerk/SchabloneOhneBedingung-Benutzerinteraktion.svg[]
+
+Beispiel: Die Webanwendung muss dem Internetnutzer die Möglichkeit bieten die ausgefüllten Formulardaten zu drucken.
+
+==== Schnittstellenanforderung
+
+* Das System führt nur in Abhängigkeit von Dritten (anderen Systemen) eine Aktion aus.
+* Das System ist passiv und wartet auf externes Ereignis.
+
+image:images/sophistregelwerk/SchabloneOhneBedingung-Schnittstellenanforderung.svg[]
+
+Beispiel: Die Webanwendung muss fähig sein Personaldaten einer anderen Anwendung zu importieren.
+
+=== Schablonen mit Bedingung
+
+image:images/sophistregelwerk/SchablonemitBedingung.svg[]
+
+Signalwörter für Bedingungen:
+
+Falls:: weist auf eine logische Bedingung hin.
+Nachdem:: weist auf eine zeitliche Bedingung hin.
+Sobald:: weist auf eine zeitliche Bedingung hin.
+Solange:: weist auf eine zeitliche Bedingung hin.
 
 
 
