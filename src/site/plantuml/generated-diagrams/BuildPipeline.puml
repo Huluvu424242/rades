@@ -1,50 +1,33 @@
 @startuml
-hide empty description
-scale 400 width
-
-state "Checkout" as checkout
-state "Statische QS und Build" as build {
-[*] --> Build
-[*] --> NexusIQTests
- Build --> qs
- NexusIQTests -down-> [*]
+partition "Stage Build" {
+start
+:Checkout;
+fork
+:NexusIQTests;
+detach
+fork again
+:Build;
+end fork
 }
-
-state "Qualitätssicherung" as qs {
-  state "Unit Tests" as unittests
-  state "Mutationstests" as mutationtests
-  state "Kompatibilitätstests" as cptests
-  state "Sonarscan" as sonar
-  state "Docker Image bauen" as imageBau
-  state "Deploy Image" as deploy
-  state "UATs" as uat
-
-  [*] --> unittests
-  unittests --> mutationtests
-  mutationtests --> sonar
-
-
-  [*] --> imageBau
-  imageBau --> uat
-  imageBau --> deploy
-  deploy --> [*]
-  uat --> sonar
-
-
-
-
-[*] --> cptests
-cptests --> sonar
-  sonar --> [*]
-
-
-
+partition "Stage Qualitätssicherung und Deployment" {
+fork
+:Docker Image bauen;
+fork
+:Deploy Image;
+detach
+fork again
+:UATs;
+fork again
+:Contrast Sicherheitsscan;
+fork end
+fork again
+:Unit Tests;
+:Mutationstests;
+fork again
+:Kompatibilitätstests;
+fork end
+:Sonarscan;
+stop
 }
-
-[*] --> checkout
-checkout --> build
-
-
-
 
 @enduml
