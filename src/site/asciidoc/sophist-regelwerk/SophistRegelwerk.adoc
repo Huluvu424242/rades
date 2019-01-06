@@ -3,7 +3,7 @@
 
 == RequirementsTemplate
 
-image:images/generated-diagrams/RequirementsTemplate.svg[]
+image:images/generated-diagrams/sophistregelwerk/RequirementsTemplate.svg[]
 
 == Schablonen ohne Bedingung
 
@@ -12,7 +12,7 @@ image:images/generated-diagrams/RequirementsTemplate.svg[]
 * Das System startet die Aktivität selbsständig.
 * Der Nutzer tritt dabei nicht in Erscheinung.
 
-image:images/generated-diagrams/SelbstständigeSystemaktivität.svg[]
+image:images/generated-diagrams/sophistregelwerk/SelbstständigeSystemaktivität.svg[]
 
 Beispiel: Die Webanwendung muss die eingegebenen Daten anzeigen.
 
@@ -21,7 +21,7 @@ Beispiel: Die Webanwendung muss die eingegebenen Daten anzeigen.
 * Das System stellt dem Nutzer eine Funktionalität zur Verfügung, welche dieser startet.
 * Das System tritt mit dem Nutzer in Interaktion.
 
-image:images/generated-diagrams/Benutzerinteraktion.svg[]
+image:images/generated-diagrams/sophistregelwerk/Benutzerinteraktion.svg[]
 
 Beispiel: Die Webanwendung muss dem Internetnutzer die Möglichkeit bieten die ausgefüllten Formulardaten zu drucken.
 
@@ -30,7 +30,7 @@ Beispiel: Die Webanwendung muss dem Internetnutzer die Möglichkeit bieten die a
 * Das System führt nur in Abhängigkeit von Dritten (anderen Systemen) eine Aktion aus.
 * Das System ist passiv und wartet auf externes Ereignis.
 
-image:images/generated-diagrams/Schnittstellenanforderung.svg[]
+image:images/generated-diagrams/sophistregelwerk/Schnittstellenanforderung.svg[]
 
 Beispiel: Die Webanwendung muss fähig sein Personaldaten einer anderen Anwendung zu importieren.
 

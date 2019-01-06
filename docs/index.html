@@ -80,49 +80,64 @@
 <div id="toctitle">Table of Contents</div>
 <ul class="sectlevel0">
 <li><a href="#projektbeschreibung">Projektbeschreibung</a></li>
+<li><a href="#sophist_regelwerk">Sophist Regelwerk</a>
+<ul class="sectlevel1">
+<li><a href="#requirementstemplate">1. RequirementsTemplate</a></li>
+<li><a href="#schablonen_ohne_bedingung">2. Schablonen ohne Bedingung</a>
+<ul class="sectlevel2">
+<li><a href="#selbständige_systemaktivität">2.1. Selbständige Systemaktivität</a></li>
+<li><a href="#benutzerinteraktion">2.2. Benutzerinteraktion</a></li>
+<li><a href="#schnittstellenanforderung">2.3. Schnittstellenanforderung</a></li>
+</ul>
+</li>
+<li><a href="#typische_fehler_im_requirements_engineering">3. Typische Fehler im Requirements Engineering</a></li>
+<li><a href="#zu_dokumentierende_dinge">4. Zu dokumentierende Dinge</a></li>
+<li><a href="#kommunikation_der_anforderungen">5. Kommunikation der Anforderungen</a></li>
+</ul>
+</li>
 <li><a href="#einführung_und_ziele">Einführung und Ziele</a>
 <ul class="sectlevel1">
-<li><a href="#aufgabenstellung">1. Aufgabenstellung</a>
+<li><a href="#aufgabenstellung">6. Aufgabenstellung</a>
 <ul class="sectlevel2">
-<li><a href="#bestandsaufnahmme">1.1. Bestandsaufnahmme</a></li>
+<li><a href="#bestandsaufnahmme">6.1. Bestandsaufnahmme</a></li>
 </ul>
 </li>
-<li><a href="#produktbeschreibung">2. Produktbeschreibung</a>
+<li><a href="#produktbeschreibung">7. Produktbeschreibung</a>
 <ul class="sectlevel2">
-<li><a href="#produktkarton">2.1. Produktkarton</a></li>
-<li><a href="#funktionale_anforderungen">2.2. Funktionale Anforderungen</a></li>
-<li><a href="#einsatzgebiet">2.3. Einsatzgebiet</a></li>
+<li><a href="#produktkarton">7.1. Produktkarton</a></li>
+<li><a href="#funktionale_anforderungen">7.2. Funktionale Anforderungen</a></li>
+<li><a href="#einsatzgebiet">7.3. Einsatzgebiet</a></li>
 </ul>
 </li>
-<li><a href="#qualitätsziele">3. Qualitätsziele</a>
+<li><a href="#qualitätsziele">8. Qualitätsziele</a>
 <ul class="sectlevel2">
-<li><a href="#bedienbarkeit">3.1. Bedienbarkeit</a></li>
-<li><a href="#Änderbarkeit">3.2. Änderbarkeit</a></li>
-<li><a href="#sicherheit">3.3. Sicherheit</a></li>
-<li><a href="#testbarkeit">3.4. Testbarkeit</a></li>
-<li><a href="#verfügbarkeit">3.5. Verfügbarkeit</a></li>
-<li><a href="#performanz">3.6. Performanz</a></li>
+<li><a href="#bedienbarkeit">8.1. Bedienbarkeit</a></li>
+<li><a href="#Änderbarkeit">8.2. Änderbarkeit</a></li>
+<li><a href="#sicherheit">8.3. Sicherheit</a></li>
+<li><a href="#testbarkeit">8.4. Testbarkeit</a></li>
+<li><a href="#verfügbarkeit">8.5. Verfügbarkeit</a></li>
+<li><a href="#performanz">8.6. Performanz</a></li>
 </ul>
 </li>
-<li><a href="#stakeholder">4. Stakeholder</a></li>
+<li><a href="#stakeholder">9. Stakeholder</a></li>
 </ul>
 </li>
 <li><a href="#randbedingungen">Randbedingungen</a>
 <ul class="sectlevel1">
-<li><a href="#technische_randbedingungen">5. Technische Randbedingungen</a></li>
-<li><a href="#organisatorische_randbedingungen">6. Organisatorische Randbedingungen</a>
+<li><a href="#technische_randbedingungen">10. Technische Randbedingungen</a></li>
+<li><a href="#organisatorische_randbedingungen">11. Organisatorische Randbedingungen</a>
 <ul class="sectlevel2">
-<li><a href="#organisation_und_struktur">6.1. Organisation und Struktur</a></li>
-<li><a href="#resourcen">6.2. Resourcen</a></li>
-<li><a href="#konventionen">6.3. Konventionen</a></li>
+<li><a href="#organisation_und_struktur">11.1. Organisation und Struktur</a></li>
+<li><a href="#resourcen">11.2. Resourcen</a></li>
+<li><a href="#konventionen">11.3. Konventionen</a></li>
 </ul>
 </li>
 </ul>
 </li>
 <li><a href="#kontextabgrenzung">Kontextabgrenzung</a>
 <ul class="sectlevel1">
-<li><a href="#fachlicher_kontext">7. Fachlicher Kontext</a></li>
-<li><a href="#verteilungskontext">8. Verteilungskontext</a></li>
+<li><a href="#fachlicher_kontext">12. Fachlicher Kontext</a></li>
+<li><a href="#verteilungskontext">13. Verteilungskontext</a></li>
 </ul>
 </li>
 <li><a href="#lösungsstrategie">Lösungsstrategie</a></li>
@@ -132,15 +147,15 @@
 <li><a href="#Übergreifende_konzepte">Übergreifende Konzepte</a></li>
 <li><a href="#architekturentscheidungen">ArchitekturEntscheidungen</a>
 <ul class="sectlevel1">
-<li><a href="#welche_entwicklungskonfiguration">9. Welche Entwicklungskonfiguration?</a>
+<li><a href="#welche_entwicklungskonfiguration">14. Welche Entwicklungskonfiguration?</a>
 <ul class="sectlevel2">
-<li><a href="#zur_fragestellung">9.1. Zur Fragestellung</a></li>
-<li><a href="#relevante_einflußfaktoren">9.2. Relevante Einflußfaktoren</a></li>
-<li><a href="#annahmen">9.3. Annahmen</a></li>
-<li><a href="#betrachtete_alternativen">9.4. Betrachtete Alternativen</a></li>
-<li><a href="#deployment_in_einen_applikationsserver">9.5. Deployment in einen Applikationsserver</a></li>
-<li><a href="#deployment_in_einen_osgi_container">9.6. Deployment in einen OSGI Container</a></li>
-<li><a href="#entscheidung">9.7. Entscheidung</a></li>
+<li><a href="#zur_fragestellung">14.1. Zur Fragestellung</a></li>
+<li><a href="#relevante_einflußfaktoren">14.2. Relevante Einflußfaktoren</a></li>
+<li><a href="#annahmen">14.3. Annahmen</a></li>
+<li><a href="#betrachtete_alternativen">14.4. Betrachtete Alternativen</a></li>
+<li><a href="#deployment_in_einen_applikationsserver">14.5. Deployment in einen Applikationsserver</a></li>
+<li><a href="#deployment_in_einen_osgi_container">14.6. Deployment in einen OSGI Container</a></li>
+<li><a href="#entscheidung">14.7. Entscheidung</a></li>
 </ul>
 </li>
 </ul>
@@ -162,12 +177,127 @@ Programmkode generiert werden (In Form eines Mixes aus Domain Driven Development
 </div>
 </div>
 </div>
-<h1 id="einführung_und_ziele" class="sect0">Einführung und Ziele</h1>
+<h1 id="sophist_regelwerk" class="sect0">Sophist Regelwerk</h1>
 <div class="sect1">
-<h2 id="aufgabenstellung">1. Aufgabenstellung</h2>
+<h2 id="requirementstemplate">1. RequirementsTemplate</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><span class="image"><img src="images/generated-diagrams/sophistregelwerk/RequirementsTemplate.svg" alt="RequirementsTemplate"/></span></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="schablonen_ohne_bedingung">2. Schablonen ohne Bedingung</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="bestandsaufnahmme">1.1. Bestandsaufnahmme</h3>
+<h3 id="selbständige_systemaktivität">2.1. Selbständige Systemaktivität</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Das System startet die Aktivität selbsständig.</p>
+</li>
+<li>
+<p>Der Nutzer tritt dabei nicht in Erscheinung.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="images/generated-diagrams/sophistregelwerk/SelbstständigeSystemaktivität.svg" alt="SelbstständigeSystemaktivität"/></span></p>
+</div>
+<div class="paragraph">
+<p>Beispiel: Die Webanwendung muss die eingegebenen Daten anzeigen.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="benutzerinteraktion">2.2. Benutzerinteraktion</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Das System stellt dem Nutzer eine Funktionalität zur Verfügung, welche dieser startet.</p>
+</li>
+<li>
+<p>Das System tritt mit dem Nutzer in Interaktion.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="images/generated-diagrams/sophistregelwerk/Benutzerinteraktion.svg" alt="Benutzerinteraktion"/></span></p>
+</div>
+<div class="paragraph">
+<p>Beispiel: Die Webanwendung muss dem Internetnutzer die Möglichkeit bieten die ausgefüllten Formulardaten zu drucken.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="schnittstellenanforderung">2.3. Schnittstellenanforderung</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Das System führt nur in Abhängigkeit von Dritten (anderen Systemen) eine Aktion aus.</p>
+</li>
+<li>
+<p>Das System ist passiv und wartet auf externes Ereignis.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="images/generated-diagrams/sophistregelwerk/Schnittstellenanforderung.svg" alt="Schnittstellenanforderung"/></span></p>
+</div>
+<div class="paragraph">
+<p>Beispiel: Die Webanwendung muss fähig sein Personaldaten einer anderen Anwendung zu importieren.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="typische_fehler_im_requirements_engineering">3. Typische Fehler im Requirements Engineering</h2>
+<div class="sectionbody">
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Unklar formulierte Anforderungen</dt>
+<dd>
+<p>sind interpretierbar</p>
+</dd>
+<dt class="hdlist1">Fehlende Anforderungen</dt>
+<dd>
+<p>die Lücke wird der Entwickler durch eigene Entscheidungen schließen.</p>
+</dd>
+<dt class="hdlist1">Lückenhafte Anforderungen durch implizites Wissen</dt>
+<dd>
+<p>Selbstverständliches wird meist nicht dokumentiert und führt bei Fluktuationen zu fehlenden Anforderungen.</p>
+</dd>
+<dt class="hdlist1">Kommunikationsprobleme zwischen Beteiligten</dt>
+<dd>
+<p>beispielsweise durch unterschiedlichen Erfahrungs- und Wissensstand.</p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="zu_dokumentierende_dinge">4. Zu dokumentierende Dinge</h2>
+<div class="sectionbody">
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Stakeholder</dt>
+<dd>
+<p>ist eine Person oder Organisation, die direkt oder indirekt Einfluss auf die Anforderungen haben oder von den Auswirkungen des geforderten Systems betroffen sind.</p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="kommunikation_der_anforderungen">5. Kommunikation der Anforderungen</h2>
+<div class="sectionbody">
+
+</div>
+</div>
+<h1 id="einführung_und_ziele" class="sect0">Einführung und Ziele</h1>
+<div class="sect1">
+<h2 id="aufgabenstellung">6. Aufgabenstellung</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="bestandsaufnahmme">6.1. Bestandsaufnahmme</h3>
 <div class="paragraph">
 <p>Bei der Entwicklung mehrschichtiger oder verteilter Anwendungen
     führen aktuell auch kleine Anpassungen bereits zu hohen Wartungsaufwänden.
@@ -186,16 +316,16 @@ Programmierstil und Arbeitsweisen der Entwickler gestellt.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="produktbeschreibung">2. Produktbeschreibung</h2>
+<h2 id="produktbeschreibung">7. Produktbeschreibung</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="produktkarton">2.1. Produktkarton</h3>
+<h3 id="produktkarton">7.1. Produktkarton</h3>
 <div class="paragraph">
 <p><span class="image"><img src="images/RADESProduktkarton.svg" alt="Rades Produktkarton"/></span></p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="funktionale_anforderungen">2.2. Funktionale Anforderungen</h3>
+<h3 id="funktionale_anforderungen">7.2. Funktionale Anforderungen</h3>
 <div class="paragraph">
 <p>RADES soll ein Entwicklungssystem für Anwendungssoftware sein. Die Anwendungen sollen in den Bereichen Mobile, Web und Desktop
     sowohl gleiches Aussehen wie auch Verhalten zeigen. Dabei müssen jedoch auch die Unterschiedlichen Nutzungsformen berücksichtigt werden.
@@ -204,7 +334,7 @@ Programmierstil und Arbeitsweisen der Entwickler gestellt.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="einsatzgebiet">2.3. Einsatzgebiet</h3>
+<h3 id="einsatzgebiet">7.3. Einsatzgebiet</h3>
 <div class="paragraph">
 <p>RADES ist für den Einsatz in kleinen Teams gedacht. Als
     Standardeinsatzfall wird von Feature Teams mit ca. 8 Entwicklern
@@ -262,10 +392,10 @@ Programmierstil und Arbeitsweisen der Entwickler gestellt.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="qualitätsziele">3. Qualitätsziele</h2>
+<h2 id="qualitätsziele">8. Qualitätsziele</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="bedienbarkeit">3.1. Bedienbarkeit</h3>
+<h3 id="bedienbarkeit">8.1. Bedienbarkeit</h3>
 <div class="paragraph">
 <p>Von RADES als eine Desktopanwendung welche für Entwickler als
 					Endnutzer gedacht ist wird eine sehr gute Bedienbarkeit erwartet.
@@ -277,7 +407,7 @@ Programmierstil und Arbeitsweisen der Entwickler gestellt.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="Änderbarkeit">3.2. Änderbarkeit</h3>
+<h3 id="Änderbarkeit">8.2. Änderbarkeit</h3>
 <div class="paragraph">
 <p>RADES ist als Entwicklerwerkzeug in einem schnellebigen Markt
 					platziert. Es ist davon auszugehen, dass das Produkt ständigen
@@ -293,7 +423,7 @@ Programmierstil und Arbeitsweisen der Entwickler gestellt.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="sicherheit">3.3. Sicherheit</h3>
+<h3 id="sicherheit">8.3. Sicherheit</h3>
 <div class="paragraph">
 <p>Bei der Benutzung von RADES ist von einem Einsatz in
 					Mehrbenutzerumgebungen auszugehen. Daher sind Zugangsdaten oder
@@ -306,7 +436,7 @@ Programmierstil und Arbeitsweisen der Entwickler gestellt.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="testbarkeit">3.4. Testbarkeit</h3>
+<h3 id="testbarkeit">8.4. Testbarkeit</h3>
 <div class="paragraph">
 <p>RADES soll generell automatisch testbar sein und auch durch
 					eine
@@ -314,7 +444,7 @@ Programmierstil und Arbeitsweisen der Entwickler gestellt.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="verfügbarkeit">3.5. Verfügbarkeit</h3>
+<h3 id="verfügbarkeit">8.5. Verfügbarkeit</h3>
 <div class="paragraph">
 <p>RADES selbst ist ein Entwicklerwerkzeug und muss als solches
 					keinen Hochverfügbarkeitsansprüchen genügen. Wenn das Werkzeug
@@ -332,7 +462,7 @@ Programmierstil und Arbeitsweisen der Entwickler gestellt.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="performanz">3.6. Performanz</h3>
+<h3 id="performanz">8.6. Performanz</h3>
 <div class="paragraph">
 <p>RADES ist als Desktopanwendung zu sehen und muss nicht
 					tausende
@@ -350,7 +480,7 @@ Programmierstil und Arbeitsweisen der Entwickler gestellt.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="stakeholder">4. Stakeholder</h2>
+<h2 id="stakeholder">9. Stakeholder</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Der wichtigste Stakeholder für das Projekt bin ich selbst. Es
@@ -381,7 +511,7 @@ Programmierstil und Arbeitsweisen der Entwickler gestellt.</p>
 </div>
 <h1 id="randbedingungen" class="sect0">Randbedingungen</h1>
 <div class="sect1">
-<h2 id="technische_randbedingungen">5. Technische Randbedingungen</h2>
+<h2 id="technische_randbedingungen">10. Technische Randbedingungen</h2>
 <div class="sectionbody">
 <div class="dlist">
 <dl>
@@ -406,10 +536,10 @@ Programmierstil und Arbeitsweisen der Entwickler gestellt.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="organisatorische_randbedingungen">6. Organisatorische Randbedingungen</h2>
+<h2 id="organisatorische_randbedingungen">11. Organisatorische Randbedingungen</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="organisation_und_struktur">6.1. Organisation und Struktur</h3>
+<h3 id="organisation_und_struktur">11.1. Organisation und Struktur</h3>
 <div class="paragraph">
 <p>RADES soll als Open Source Projekt im Internet entwickelt werden. Die Infrastruktur soll generell eine weltweite, verteilte Entwicklung ermöglichen. Initial wird das Projekt mit Fokus auf den deutschen Sprachraum gestartet. Daher erfolgt die Kommunikation und Dokumentation auch in deutscher Sprache. Das Projektinhalt und -ziele werden vom Initiator vorgegeben.</p>
 </div>
@@ -418,7 +548,7 @@ Programmierstil und Arbeitsweisen der Entwickler gestellt.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="resourcen">6.2. Resourcen</h3>
+<h3 id="resourcen">11.2. Resourcen</h3>
 <div class="paragraph">
 <p>Für die Entwicklung des Systems stehen keine finanziellen Mittel bereit und eine professionelle Finanzierung ala Crowdfunding ist nicht angedacht.</p>
 </div>
@@ -427,7 +557,7 @@ Programmierstil und Arbeitsweisen der Entwickler gestellt.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="konventionen">6.3. Konventionen</h3>
+<h3 id="konventionen">11.3. Konventionen</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Generierung vs. Kodierung</dt>
@@ -446,13 +576,13 @@ Aus diesem Grund werden die generierten Programmteile stets in separaten Artifak
 </div>
 <h1 id="kontextabgrenzung" class="sect0">Kontextabgrenzung</h1>
 <div class="sect1">
-<h2 id="fachlicher_kontext">7. Fachlicher Kontext</h2>
+<h2 id="fachlicher_kontext">12. Fachlicher Kontext</h2>
 <div class="sectionbody">
 
 </div>
 </div>
 <div class="sect1">
-<h2 id="verteilungskontext">8. Verteilungskontext</h2>
+<h2 id="verteilungskontext">13. Verteilungskontext</h2>
 <div class="sectionbody">
 
 </div>
@@ -490,16 +620,16 @@ Aus diesem Grund werden die generierten Programmteile stets in separaten Artifak
 
 <h1 id="architekturentscheidungen" class="sect0">ArchitekturEntscheidungen</h1>
 <div class="sect1">
-<h2 id="welche_entwicklungskonfiguration">9. Welche Entwicklungskonfiguration?</h2>
+<h2 id="welche_entwicklungskonfiguration">14. Welche Entwicklungskonfiguration?</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="zur_fragestellung">9.1. Zur Fragestellung</h3>
+<h3 id="zur_fragestellung">14.1. Zur Fragestellung</h3>
 <div class="paragraph">
 <p>Bei der Frage geht es um die Konfiguration des Entwicklungsrechners.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="relevante_einflußfaktoren">9.2. Relevante Einflußfaktoren</h3>
+<h3 id="relevante_einflußfaktoren">14.2. Relevante Einflußfaktoren</h3>
 <div class="ulist">
 <ul>
 <li>
@@ -510,7 +640,7 @@ und Anpassung von Kode.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="annahmen">9.3. Annahmen</h3>
+<h3 id="annahmen">14.3. Annahmen</h3>
 <div class="ulist">
 <ul>
 <li>
@@ -524,7 +654,7 @@ auszustauschen sind.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="betrachtete_alternativen">9.4. Betrachtete Alternativen</h3>
+<h3 id="betrachtete_alternativen">14.4. Betrachtete Alternativen</h3>
 <div class="paragraph">
 <p>Als Alternativen wurden folgende Konfigurationen betrachtet:</p>
 </div>
@@ -540,7 +670,7 @@ auszustauschen sind.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="deployment_in_einen_applikationsserver">9.5. Deployment in einen Applikationsserver</h3>
+<h3 id="deployment_in_einen_applikationsserver">14.5. Deployment in einen Applikationsserver</h3>
 <div class="paragraph">
 <p>Es wurden die vorhandenen Erfahrungen ausgewertet. Es lagen nur
 Erfahrungen mit folgender Systemkonfiguration vor:</p>
@@ -621,7 +751,7 @@ erneutes Deployment notwendig:</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="deployment_in_einen_osgi_container">9.6. Deployment in einen OSGI Container</h3>
+<h3 id="deployment_in_einen_osgi_container">14.6. Deployment in einen OSGI Container</h3>
 <div class="paragraph">
 <p>Hierzu liegen keine praktischen Erfahrungen vor. Auf Grund der
 Informationen über die OSGI Technologie werden folgende Vor- und
@@ -653,7 +783,7 @@ erweist.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="entscheidung">9.7. Entscheidung</h3>
+<h3 id="entscheidung">14.7. Entscheidung</h3>
 <div class="paragraph">
 <p>Es wird sich für den Einsatz des OSGI Containers entschieden auch
 wenn dies ein größeres Risiko hinsichtlich des zu veranschlagenden
