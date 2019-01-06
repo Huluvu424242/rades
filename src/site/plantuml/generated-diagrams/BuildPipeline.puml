@@ -1,0 +1,50 @@
+@startuml
+hide empty description
+scale 400 width
+
+state "Checkout" as checkout
+state "Statische QS und Build" as build {
+[*] --> Build
+[*] --> NexusIQTests
+ Build --> qs
+ NexusIQTests -down-> [*]
+}
+
+state "Qualitätssicherung" as qs {
+  state "Unit Tests" as unittests
+  state "Mutationstests" as mutationtests
+  state "Kompatibilitätstests" as cptests
+  state "Sonarscan" as sonar
+  state "Docker Image bauen" as imageBau
+  state "Deploy Image" as deploy
+  state "UATs" as uat
+
+  [*] --> unittests
+  unittests --> mutationtests
+  mutationtests --> sonar
+
+
+  [*] --> imageBau
+  imageBau --> uat
+  imageBau --> deploy
+  deploy --> [*]
+  uat --> sonar
+
+
+
+
+[*] --> cptests
+cptests --> sonar
+  sonar --> [*]
+
+
+
+}
+
+[*] --> checkout
+checkout --> build
+
+
+
+
+@enduml
