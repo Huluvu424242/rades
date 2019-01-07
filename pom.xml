@@ -56,6 +56,11 @@
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<maven.compiler.target>1.8</maven.compiler.target>
 		<maven-compiler-plugin.version>3.7.0</maven-compiler-plugin.version>
+		<asciidoctorj-diagram.version>1.5.11</asciidoctorj-diagram.version>
+		<asciidoctor-maven-plugin.version>1.5.7.1</asciidoctor-maven-plugin.version>
+		<plantuml.version>8059</plantuml.version>
+		<graphviz-java.version>0.8.0</graphviz-java.version>
+		<plantuml-maven-plugin.version>1.2</plantuml-maven-plugin.version>
 	</properties>
 
 
@@ -72,7 +77,7 @@
 				<plugin>
 					<groupId>org.asciidoctor</groupId>
 					<artifactId>asciidoctor-maven-plugin</artifactId>
-					<version>1.5.6</version>
+					<version>${asciidoctor-maven-plugin.version}</version>
 					<configuration>
 						<requires>
 							<require>asciidoctor-diagram</require>
@@ -93,7 +98,7 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-enforcer-plugin</artifactId>
-				<version>3.0.0-M1</version>
+				<version>3.0.0-M2</version>
 				<executions>
 					<execution>
 						<id>enforce-maven</id>
@@ -113,7 +118,7 @@
 			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
 				<artifactId>versions-maven-plugin</artifactId>
-				<version>2.5</version>
+				<version>2.7</version>
 				<configuration>
 					<rulesUri>file:///${project.basedir}/etc/version-rules.xml</rulesUri>
 				</configuration>
@@ -136,6 +141,24 @@
 							<goal>display-plugin-updates</goal>
 						</goals>
 					</execution>
+					<execution>
+						<id>site-show-dep-updates</id>
+						<phase>
+							pre-site
+						</phase>
+						<goals>
+							<goal>display-dependency-updates</goal>
+						</goals>
+					</execution>
+					<execution>
+						<id>site-show-plugin-updates</id>
+						<phase>
+							pre-site
+						</phase>
+						<goals>
+							<goal>display-plugin-updates</goal>
+						</goals>
+					</execution>
 				</executions>
 			</plugin>
 			<plugin>
@@ -153,6 +176,10 @@
 									<directory>${basedir}/docs</directory>
 									<followSymlinks>false</followSymlinks>
 								</fileset>
+								<fileset>
+									<directory>${basedir}/src/site/resources/images/generated-diagrams</directory>
+									<followSymlinks>false</followSymlinks>
+								</fileset>
 							</filesets>
 						</configuration>
 					</execution>
@@ -163,19 +190,19 @@
 				<groupId>com.github.jeluard</groupId>
 				<artifactId>plantuml-maven-plugin</artifactId>
 				<!-- letzte gültige Version, keine Weiterentwicklung mehr, xxxx versionen sind älter -->
-				<version>1.2</version>
+				<version>${plantuml-maven-plugin.version}</version>
 				<dependencies>
 					<dependency>
 						<groupId>net.sourceforge.plantuml</groupId>
 						<artifactId>plantuml</artifactId>
-						<version>8059</version>
+						<version>${plantuml.version}</version>
 					</dependency>
 				</dependencies>
 				<configuration>
 					<sourceFiles>
 						<directory>${basedir}/src/site/plantuml/</directory>
 						<includes>
-							<include>**/*.txt</include>
+							<include>**/*.puml</include>
 						</includes>
 					</sourceFiles>
 					<outputDirectory>${basedir}/src/site/resources/images</outputDirectory>
@@ -205,23 +232,23 @@
 					<dependency>
 						<groupId>org.asciidoctor</groupId>
 						<artifactId>asciidoctor-maven-plugin</artifactId>
-						<version>1.5.6</version>
+						<version>${asciidoctor-maven-plugin.version}</version>
 					</dependency>
 					<dependency>
 						<groupId>org.asciidoctor</groupId>
 						<artifactId>asciidoctorj-diagram</artifactId>
-						<version>1.5.9</version>
+						<version>${asciidoctorj-diagram.version}</version>
 					</dependency>
 					<!-- https://mvnrepository.com/artifact/net.sourceforge.plantuml/plantuml -->
 					<dependency>
 						<groupId>net.sourceforge.plantuml</groupId>
 						<artifactId>plantuml</artifactId>
-						<version>8059</version>
+						<version>${plantuml.version}</version>
 					</dependency>
 					<dependency>
 						<groupId>guru.nidi</groupId>
 						<artifactId>graphviz-java</artifactId>
-						<version>0.5.4</version>
+						<version>${graphviz-java.version}</version>
 					</dependency>
 				</dependencies>
 			</plugin>
@@ -244,7 +271,7 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-project-info-reports-plugin</artifactId>
-				<version>2.9</version>
+				<version>3.0.0</version>
 				<reportSets>
 					<reportSet>
 						<configuration>

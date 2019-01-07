@@ -1,0 +1,9 @@
+/* extracted from http://www.bottlecaps.de/rr/ui on Fri Jan 4, 2019, 18:59 (UTC+01)
+ */
+
+Grammar         ::= System Verbindlichkeit Funktion Objekt Prozesswort
+System          ::= 'Das System <Systemname>'
+Verbindlichkeit ::= 'muss' | 'sollte' | 'wird'
+Funktion        ::= '-' | '<wem?> Die Möglichkeit bieten' | 'fähig sein'
+Objekt          ::= '[<Objekt&Ergänzung des Objektes>]'
+Prozesswort     ::= '<Prozesswort>'

@@ -1,0 +1,33 @@
+@startuml
+partition "Stage Build" {
+start
+:Checkout;
+fork
+:NexusIQTests;
+detach
+fork again
+:Build;
+end fork
+}
+partition "Stage Qualitätssicherung und Deployment" {
+fork
+:Docker Image bauen;
+fork
+:Deploy Image;
+detach
+fork again
+:UATs;
+fork again
+:Contrast Sicherheitsscan;
+fork end
+fork again
+:Unit Tests;
+:Mutationstests;
+fork again
+:Kompatibilitätstests;
+fork end
+:Sonarscan;
+stop
+}
+
+@enduml

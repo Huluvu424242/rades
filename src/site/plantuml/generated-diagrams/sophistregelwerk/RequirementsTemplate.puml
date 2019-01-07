@@ -1,0 +1,25 @@
+@startuml
+
+:Das System <Systemname>;
+floating note left: Gegeben: Der Systemname
+split
+: muss;
+split again
+: sollte;
+split again
+: wird;
+floating note right: Schritt 1: Rechtliche Verbindlichkeit festlegen
+end split
+split
+split again
+: <wem?> Die Möglichkeit bieten;
+split again
+: fähig sein ;
+floating note right: Schritt 3: Art der Funktionalität festlegen
+end split
+:[<Objekt & Ergänzung des Objektes>];
+floating note left: Schritt 4: Objekt identifizieren
+:<Prozesswort>;
+floating note right: Schritt 2: Funktionalität identifizieren
+
+@enduml
