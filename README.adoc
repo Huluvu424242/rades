@@ -6,6 +6,57 @@ image:https://badge.waffle.io/PIUGroup/rades.svg?columns=all["Waffle.io - Column
 
 # RADES
 
-
 Hier gehts zur link:https://PIUGroup.github.io/rades/[Projektdokumentation]
+
+
+## Projektziel
+
+Das Ziel des Projektes besteht darin, dem Entwickler Werkzeuge zur Entlastung von stupider, eintöniger Arbeit und stets
+wiederkehrenden Tätigkeiten an die Hand zu geben. Unter eintönigen Tätigkeiten werden solche verstanden, bei denen der
+Entwickler im Grundsatz ähnlichen Kode schreibt nur mit geänderten Bezeichnern. So wird die Erweiterung einer
+Webanwendung um ein Texteingabefeld meist nahezu identisch ablaufen. Irgendwo muss die Persistenzschicht um das Feld
+erweitet werden, der Backendservice muss das Feld entgegennehmen und es zur Persistenz weitergeben, nebenbei muss der
+Service den Wert des Feldes auf gültige Werte prüfen. Bei Problemen müssen entsprechende Fehlermeldungen erzeugt werden
+und in der GUI ist das Feld ebenfalls zu verorten. Hier muss es evtl. noch in den internen State der Anwendung
+aufgenommen werden und ja auch hier müssen Validierungen realisiert werden und in der Regel die gleichen wie im Service.
+
+Bislang war die Lösung ein Modell in einer DSL zu beschreiben und daraus die entsprechenden Kodeteile zu genieren.
+Dieses Vorgehen zeigte jedoch nach kurzer Hype- und Erfahrungsphase einige Nachteile auf:
+
+* Es entstehen Aufwände bei der Erstellung und Pflege der DSL (mit der Zeit werden neue Sprachkonstrukte benötigt).
+* Generate und manuell programmierte Kodeteile müssen getrennt verwaltet werden, damit die Generierung keine manuelle
+Arbeit zerstört. Bis dato gab es zwei grundlegende Methoden zur Lösung: a) Einführung geschützter Kodebereiche für
+manuelle Implementierung. b) Generierung abstrakter Klassen von denen die manuelle konkrete Implementierung abgeleitet
+wird.
+* Die Benutzung von Einmalgeneraten (Falls das Target nicht existiert wird es generiert anderenfalls wird der vorhandene
+Kode nicht vom Generator angetastet) führt zu Problemen bei fachlichen und technischen Refactoring.
+* Eine fachliche Umbenennung  führt zu sehr vielen Änderungen (Umbenennungen) im technischen Kode. Da dort aber sowohl
+die alten Generate wie auch die nun neuen Generate existieren und zusätzlich evtl. Schnittstellen verändert wurden, kann
+sich der Entwickler vor Compilerfehlern kaum retten. Daher versucht dieser zunächst die alten Generate zu eliminieren,
+dann die Neuen anzupassen und dann die Fachlichkeit aus den alten von den alten Generaten abgeleiteten Klassen in die
+neuen Generate zu kopieren. Da die alten Generate lokal nicht mehr vorliegen, hat er sich diese entweder als Backup
+gesichert oder hat diese mit eingescheckt und greift nun auf die alten Versionen im SCM zurück.
+* Auf Grund von Änderungen der DSL oder Unzulänglichkeiten im Buildprozess oder ganz profan aus Performancegründen oder
+für Refactorings werden die Generate mit ins SCM aufgenommen.
+
+
+Basierend auf diesen, über Jahrzehnte gesammelten Erfahrungen mit Generator getriebener Entwicklung aus fachlichen
+Modellen heraus, soll ein neuer Lösungsraum erarbeitet werden. Folgende Lösungsansätze scheinen zielführend zu sein:
+
+Nutzung von Annotationsprozessoren::
+Mittels Annotationsprozessoren lassen sich neue Kodeteile generieren. Diese lassen sich Typsicher gestalten und
+unterstützen inkrementelle Kompilation, da der Compiler die Annotationen in einem separaten Schritt und in einer eigenen
+JVM auswertet. Nachteile:
+** Separater Buildschritt
+** Schwierige Testbarkeit
+** Bestehende Klassen können nicht verändert werden
+
+Nutzung des Plugin Mechanismus des javac Compilers::
+** Aktuell liegen hierzu keine Erfahrungen vor, allerdings existiert ein vielversprechendes Projekt unter
+http://manifold.systems/
+
+
+
+
+
 
